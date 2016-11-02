@@ -1,8 +1,40 @@
 <scene name="Eau">
    <Actors class="java.util.ArrayList">
-      <actor HasUVTextrue="false" SpritePath="data/douche/droplet.png">
-         <Position x="404.0" y="227.47531"/>
-         <Scale x="64.0" y="64.0"/>
+      <actor HasUVTextrue="false" SpritePath="data/eau/bg.png">
+         <Position x="0" y="0"/>
+         <Scale x="800.0" y="480.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/bano.png">
+         <Position x="8.0" y="15.0"/>
+         <Scale x="150.0" y="80.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/cuvette.png">
+         <Position x="549.3333" y="21.0"/>
+         <Scale x="64.0" y="80.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/fota.png">
+         <Position x="341.33334" y="63.0"/>
+         <Scale x="64.0" y="70.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/lavabo.png">
+         <Position x="428.00003" y="19.0"/>
+         <Scale x="80.0" y="120.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/mirror.png">
+         <Position x="436.0" y="153.0"/>
+         <Scale x="64.0" y="100.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/placard.png">
+         <Position x="649.3333" y="22.0"/>
+         <Scale x="150.0" y="250.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/rechach.png">
+         <Position x="16.0" y="91.0"/>
+         <Scale x="64.0" y="100.0"/>
+      </actor>
+      <actor HasUVTextrue="false" SpritePath="data/eau/soap.png">
+         <Position x="430.6667" y="122.0"/>
+         <Scale x="20.0" y="20.0"/>
       </actor>
    </Actors>
 </scene>
