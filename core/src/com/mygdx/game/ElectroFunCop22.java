@@ -13,14 +13,16 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector2;
+//import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.mygdx.config.Config;
 import com.mygdx.editor.Editor;
 import com.mygdx.scene.Actor;
 import com.mygdx.scene.Scene;
 import com.mygdx.scene.SceneManager;
+import com.mygdx.scene.Vector2;
 
 public class ElectroFunCop22 extends ApplicationAdapter {
 
@@ -37,13 +39,12 @@ public class ElectroFunCop22 extends ApplicationAdapter {
 
       //New game system
       SceneManager.create();
-      Editor.create();
 
-      Scene _newScene = new Scene("Douche");
-      Actor _newActor = new Actor("data/douche/droplet.png", false, new Vector2(20, 20));
+       if(Config.enableEditor)
+       {
+           Editor.create();
+       }
 
-      _newScene.addActor(_newActor);
-      SceneManager.Instance.addScene(_newScene);
       SceneManager.Instance.load();
 
       //

@@ -5,32 +5,48 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector2;
+//import com.badlogic.gdx.math.Vector2;
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
 
+@Root
 public class Actor
 {
+    @Attribute(name="HasUVTextrue")
     private boolean mHasUVTexture = false;
+
     private boolean mAlreadyLoaded = false;
+
+    @Attribute(name="SpritePath")
     private String mTexturePath = null;
+
     private Texture mSprite = null;
+
+    @Element(name="Position")
     private Vector2 mPosition = null;
+
+    @Element(name="Scale")
     private Vector2 mScale = new Vector2(64, 64);
-    //private Rectangle mRect = new Rectangle();
+
     private Scene mParent = null;
 
-    public Actor(String pTexturePath, boolean pHasUVTexture)
+    public Actor()
     {
-        mTexturePath = pTexturePath;
-        mHasUVTexture = pHasUVTexture;
+        super();
     }
 
-    public Actor(String pTexturePath, boolean pHasUVTexture, Vector2 pPos)
+
+    public Actor(boolean pHasUVTexture, String pTexturePath, Vector2 pPos, Vector2 pScale)
     {
         mTexturePath = pTexturePath;
         mHasUVTexture = pHasUVTexture;
 
         //Position
         mPosition = pPos;
+
+        //Scale
+        mScale = pScale;
     }
 
     public Actor(String pTexturePath, boolean pHasUVTexture, Vector2 pPos, Scene pParent)
@@ -95,6 +111,8 @@ public class Actor
         {
             //TODO
         }
+
+        mAlreadyLoaded = true;
     }
 
     public void update()

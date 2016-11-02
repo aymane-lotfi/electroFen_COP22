@@ -1,12 +1,22 @@
 package com.mygdx.scene;
 
-import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.Gdx;
+//import com.badlogic.gdx.math.Vector2;
+import com.mygdx.config.Config;
+import com.mygdx.game.ElectroFunCop22;
+import org.simpleframework.xml.*;
+import org.simpleframework.xml.core.Persister;
 
+import java.io.File;
 import java.util.*;
 
+@Root
 public class Scene
 {
+    @Attribute(name="name")
     private String mName = null;
+
+    @ElementList(name="Actors")
     private List<Actor> mActors = new ArrayList<Actor>();
 
 
@@ -15,11 +25,22 @@ public class Scene
         mName = pName;
     }
 
+    public Scene()
+    {
+        super();
+    }
+
     public void addActor(Actor pActor)
     {
         pActor.setParent(this);
         mActors.add(pActor);
     }
+
+    public String getName()
+    {
+        return mName;
+    }
+
 
     public Actor getActorAt(Vector2 pPosition)
     {
@@ -32,6 +53,22 @@ public class Scene
         }
 
         return null;
+    }
+
+    public void save()
+    {
+        Serializer _serializer = new Persister();
+        String _sceneFilePath = Config.SCENES_PATH+"/"+mName+".xml";
+
+        File _sceneFile = new File(_sceneFilePath);
+
+        try {
+            _serializer.write(this, _sceneFile);
+        }
+        catch(Exception e)
+        {
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "[Scene - save()] error : "+e.toString());
+        }
     }
 
     public void load()
