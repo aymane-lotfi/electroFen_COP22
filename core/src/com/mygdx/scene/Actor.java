@@ -1,46 +1,40 @@
 package com.mygdx.scene;
 
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Rectangle;
-//import com.badlogic.gdx.math.Vector2;
+import com.mygdx.components.Component;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Root
 public class Actor
 {
-    @Attribute(name="HasUVTextrue")
-    private boolean mHasUVTexture = false;
-
-    private boolean mAlreadyLoaded = false;
-
-    @Attribute(name="SpritePath")
-    private String mTexturePath = null;
-
-    private Texture mSprite = null;
-
     @Element(name="Position")
     private Vector2 mPosition = null;
 
     @Element(name="Scale")
     private Vector2 mScale = new Vector2(64, 64);
 
+    @ElementList(name="Components", required=false)
+    private List<Component> mComponents = new ArrayList<Component>();
+
     private Scene mParent = null;
 
     public Actor()
     {
         super();
+        mPosition = new Vector2(0,0);
     }
 
 
     public Actor(boolean pHasUVTexture, String pTexturePath, Vector2 pPos, Vector2 pScale)
     {
-        mTexturePath = pTexturePath;
-        mHasUVTexture = pHasUVTexture;
 
         //Position
         mPosition = pPos;
@@ -53,11 +47,14 @@ public class Actor
     {
         mParent = pParent;
 
-        mTexturePath = pTexturePath;
-        mHasUVTexture = pHasUVTexture;
 
         //Position
         mPosition = pPos;
+    }
+
+    public void addComponent(Component pComp)
+    {
+        mComponents.add(pComp);
     }
 
     public void setParent(Scene pScene)
@@ -68,11 +65,6 @@ public class Actor
     public Scene getParent()
     {
         return mParent;
-    }
-
-    public boolean alreadyLoaded()
-    {
-        return mAlreadyLoaded;
     }
 
     public Vector2 getPos()
@@ -103,37 +95,37 @@ public class Actor
 
     public void load()
     {
-        if(!mHasUVTexture)
+        for(Component comp : mComponents)
         {
-            mSprite = new Texture(Gdx.files.internal(mTexturePath));
+            comp.setActor(this);
+            comp.load();
         }
-        else
-        {
-            //TODO
-        }
-
-        mAlreadyLoaded = true;
     }
 
     public void update()
     {
-
+        for(Component comp : mComponents)
+        {
+            comp.update();
+        }
     }
 
     public void draw()
     {
-        if(mPosition != null)
+        for(Component comp : mComponents)
         {
-            Batch _spriteBatch = SceneManager.Instance.getSpriteBatch();
-            if(_spriteBatch != null)
+            if(comp.isDrawable())
             {
-                _spriteBatch.draw(mSprite, mPosition.x, mPosition.y, mScale.x, mScale.y);
+                comp.draw();
             }
         }
     }
 
     public void destroy()
     {
-        mSprite.dispose();
+        for(Component comp : mComponents)
+        {
+            comp.destroy();
+        }
     }
 }

@@ -1,40 +1,79 @@
 <scene name="Eau">
    <Actors class="java.util.ArrayList">
-      <actor HasUVTextrue="false" SpritePath="data/eau/bg.png">
-         <Position x="0" y="0"/>
+      <actor>
+         <Position x="0.0" y="0.0"/>
          <Scale x="800.0" y="480.0"/>
+         <Components class="java.util.ArrayList">
+	 	<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/bano.png">
+      <actor>
          <Position x="8.0" y="15.0"/>
          <Scale x="150.0" y="80.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bano.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/cuvette.png">
+      <actor>
          <Position x="549.3333" y="21.0"/>
          <Scale x="64.0" y="80.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/cuvette.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/fota.png">
+      <actor>
          <Position x="341.33334" y="63.0"/>
          <Scale x="64.0" y="70.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/fota.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/lavabo.png">
+      <actor>
          <Position x="428.00003" y="19.0"/>
          <Scale x="80.0" y="120.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/lavabo.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/mirror.png">
+      <actor>
          <Position x="436.0" y="153.0"/>
          <Scale x="64.0" y="100.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/mirror.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/placard.png">
+      <actor>
          <Position x="649.3333" y="22.0"/>
          <Scale x="150.0" y="250.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/placard.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/rechach.png">
+      <actor>
          <Position x="16.0" y="91.0"/>
          <Scale x="64.0" y="100.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/rechach.png" />            
+         </Components>
       </actor>
-      <actor HasUVTextrue="false" SpritePath="data/eau/soap.png">
+      <actor>
          <Position x="430.6667" y="122.0"/>
          <Scale x="20.0" y="20.0"/>
+         <Components class="java.util.ArrayList">
+		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/soap.png" />            
+         </Components>
       </actor>
-   </Actors>
+
+	<actor>
+		 <Position x="160.0" y="10.0"/>
+		 <Scale x="80.0" y="120.0"/>
+		 <Components class="java.util.ArrayList">
+		    <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+		       <Animations class="java.util.ArrayList">
+		          <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="0.5"/>
+		       </Animations>
+		    </component>
+		 </Components>
+      </actor>
+  </Actors>   
 </scene>
