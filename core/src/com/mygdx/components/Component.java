@@ -23,6 +23,8 @@ public class Component
         mActor = pActor;
     }
 
+    public String getName(){return mName;}
+
     public Component()
     {
 

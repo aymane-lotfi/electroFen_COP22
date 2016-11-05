@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Camera;
 //import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Logger;
+import com.mygdx.components.AnimationComponent;
 import com.mygdx.game.ElectroFunCop22;
 import com.mygdx.scene.Actor;
 import com.mygdx.scene.Scene;
@@ -66,6 +67,28 @@ public class Editor implements InputProcessor
         {
             Gdx.app.log(ElectroFunCop22.APP_TAG, "Change scene to Eau scene");
             SceneManager.Instance.changeScene("Eau");
+        }
+
+        //Girl animations test
+        if(keycode == Input.Keys.A)
+        {
+            Scene _currentScene = SceneManager.Instance.getCurrentScene();
+            Actor _girl = _currentScene.getActorByName("girl");
+            if(_girl != null)
+            {
+                AnimationComponent _animComp = (AnimationComponent)_girl.getComponent("AnimationComponent");
+                if(_animComp != null) {
+                    _animComp.changeAnim("clothes_clean");
+                }
+                else
+                {
+                    Gdx.app.error(ElectroFunCop22.APP_TAG, "Girl doesn't have animationComponent");
+                }
+            }
+            else
+            {
+                Gdx.app.error(ElectroFunCop22.APP_TAG, "the girl is not found in the scene");
+            }
         }
 
         //Selecting layer

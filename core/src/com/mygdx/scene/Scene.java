@@ -55,6 +55,19 @@ public class Scene
         return null;
     }
 
+    public Actor getActorByName(String pName)
+    {
+        for(Actor actor : mActors)
+        {
+            if(actor.getName().equals(pName))
+            {
+                return actor;
+            }
+        }
+
+        return null;
+    }
+
     public Actor getActorAt(Vector2 pPosition, int pLayer)
     {
         for(Actor actor : mActors)

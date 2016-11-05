@@ -89,6 +89,36 @@ public class Animation
         }
     }
 
+    public void playOnce()
+    {
+        mAnimation.setPlayMode(com.badlogic.gdx.graphics.g2d.Animation.PlayMode.NORMAL);
+        if(!mAnimation.isAnimationFinished(mTime))
+        {
+            mTime += Gdx.graphics.getDeltaTime();
+            mCurrentFrame = mAnimation.getKeyFrame(mTime, true);
+
+            if(mActor != null)
+            {
+                SceneManager.Instance.getSpriteBatch().draw(mCurrentFrame, mActor.getPos().x, mActor.getPos().y);
+            }
+            else
+            {
+                Gdx.app.error(ElectroFunCop22.APP_TAG, "[Animation - play()] failed to play "+mName+" animation actor is null");
+            }
+        }
+
+        else
+        {
+            mCurrentFrame = mAnimation.getKeyFrame(mFramesCount-1, true); //Last frame
+
+            if(mActor != null)
+            {
+                SceneManager.Instance.getSpriteBatch().draw(mCurrentFrame, mActor.getPos().x, mActor.getPos().y);
+            }
+        }
+
+    }
+
     public void destroy()
     {
     }

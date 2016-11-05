@@ -31,6 +31,26 @@ public class AnimationComponent extends Component
         mAnimations.add(pAnim);
     }
 
+    public void changeAnim(String pAnimName)
+    {
+        Animation _old = mCurrentAnimation;
+        mCurrentAnimation = null;
+        for(Animation anim : mAnimations)
+        {
+            if(anim.mName.equals(pAnimName))
+            {
+                mCurrentAnimation = anim;
+                break;
+            }
+        }
+
+        if(mCurrentAnimation == null)
+        {
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "animation "+pAnimName+" doesn't exist");
+            mCurrentAnimation = _old;
+        }
+    }
+
     public void load()
     {
         for(Animation anim : mAnimations)
@@ -48,12 +68,10 @@ public class AnimationComponent extends Component
 
     public void draw()
     {
-        if(mCurrentAnimation != null)
-        {
-            mCurrentAnimation.play();
-        }
-        else
-        {
+        if (mCurrentAnimation != null) {
+            //mCurrentAnimation.play();
+            mCurrentAnimation.playOnce();
+        } else {
             Gdx.app.error(ElectroFunCop22.APP_TAG, "[AnimationComponent - draw()] current animation is null");
         }
     }

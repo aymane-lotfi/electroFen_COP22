@@ -66,11 +66,17 @@
 
 	<actor Name="girl" Layer="1">
 		 <Position x="160.0" y="10.0"/>
-		 <Scale x="80.0" y="120.0"/>
+		 <Scale x="60.0" y="90.0"/>
 		 <Components class="java.util.ArrayList">
 		    <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
 		       <Animations class="java.util.ArrayList">
 		          <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="0.5"/>
+
+ 			  <animation Name="clothes_clean" AnimationSheet="data/actors/girl/animations/clothes_clean.PNG" FramesCount="4" Speed="0.5"/>
+                          
+                          <animation Name="girl_clean" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.5"/>
+
+		          <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.5"/>
 		       </Animations>
 		    </component>
 		 </Components>

@@ -110,6 +110,19 @@ public class Actor
         mScale = pScale;
     }
 
+    public Component getComponent(String pCompName)
+    {
+        for(Component comp : mComponents)
+        {
+            if(comp.getName().equals(pCompName))
+            {
+                return comp;
+            }
+        }
+
+        return null;
+    }
+
     public void load()
     {
         for(Component comp : mComponents)
