@@ -44,6 +44,7 @@ public class Editor implements InputProcessor
 
     //Editor states
     private boolean mDragging = false;
+    private int mCurrentSelectedLayer = 0;
     //
 
     //Input Handlers
@@ -60,16 +61,24 @@ public class Editor implements InputProcessor
             }
         }
 
-        if(keycode == Input.Keys.F) //For test
-        {
-            Gdx.app.log(ElectroFunCop22.APP_TAG, "Change scene to Feu scene");
-            SceneManager.Instance.changeScene("Feu");
-        }
 
         if(keycode == Input.Keys.E) //For test
         {
             Gdx.app.log(ElectroFunCop22.APP_TAG, "Change scene to Eau scene");
             SceneManager.Instance.changeScene("Eau");
+        }
+
+        //Selecting layer
+        if(keycode == Input.Keys.B) //Background
+        {
+            Gdx.app.log(ElectroFunCop22.APP_TAG, "Select Layer 0");
+            mCurrentSelectedLayer = 0;
+        }
+
+        if(keycode == Input.Keys.F) //Foreground
+        {
+            Gdx.app.log(ElectroFunCop22.APP_TAG, "Select Layer 1");
+            mCurrentSelectedLayer = 1;
         }
 
         return true;
@@ -97,7 +106,7 @@ public class Editor implements InputProcessor
         Gdx.app.log(ElectroFunCop22.APP_TAG, "[Editor - touchDown()] mouse position  :"+_mousePos.toString());
 
         Scene _currentScene = SceneManager.Instance.getCurrentScene();
-        mSelectedActor = _currentScene.getActorAt(new Vector2(_mousePos.x, _mousePos.y));
+        mSelectedActor = _currentScene.getActorAt(new Vector2(_mousePos.x, _mousePos.y), mCurrentSelectedLayer);
 
         if(mSelectedActor != null)
         {

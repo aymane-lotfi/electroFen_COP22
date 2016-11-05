@@ -55,6 +55,19 @@ public class Scene
         return null;
     }
 
+    public Actor getActorAt(Vector2 pPosition, int pLayer)
+    {
+        for(Actor actor : mActors)
+        {
+            if(actor.getLayer() == pLayer && actor.selected(pPosition))
+            {
+                return actor;
+            }
+        }
+
+        return null;
+    }
+
     public void save()
     {
         Serializer _serializer = new Persister();

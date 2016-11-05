@@ -1,62 +1,62 @@
 <scene name="Eau">
    <Actors class="java.util.ArrayList">
-      <actor>
+      <actor Name="bg" Layer="0">
          <Position x="0.0" y="0.0"/>
          <Scale x="800.0" y="480.0"/>
          <Components class="java.util.ArrayList">
 	 	<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="bano" Layer="1">
          <Position x="8.0" y="15.0"/>
          <Scale x="150.0" y="80.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bano.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="cuvette" Layer="0">
          <Position x="549.3333" y="21.0"/>
          <Scale x="64.0" y="80.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/cuvette.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="fota" Layer="1">
          <Position x="341.33334" y="63.0"/>
          <Scale x="64.0" y="70.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/fota.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="lavabo" Layer="1">
          <Position x="428.00003" y="19.0"/>
          <Scale x="80.0" y="120.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/lavabo.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="mirror" Layer="1">
          <Position x="436.0" y="153.0"/>
          <Scale x="64.0" y="100.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/mirror.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="placard" Layer="1">
          <Position x="649.3333" y="22.0"/>
          <Scale x="150.0" y="250.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/placard.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="rechach" Layer="1">
          <Position x="16.0" y="91.0"/>
          <Scale x="64.0" y="100.0"/>
          <Components class="java.util.ArrayList">
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/rechach.png" />            
          </Components>
       </actor>
-      <actor>
+      <actor Name="soap" Layer="1">
          <Position x="430.6667" y="122.0"/>
          <Scale x="20.0" y="20.0"/>
          <Components class="java.util.ArrayList">
@@ -64,7 +64,7 @@
          </Components>
       </actor>
 
-	<actor>
+	<actor Name="girl" Layer="1">
 		 <Position x="160.0" y="10.0"/>
 		 <Scale x="80.0" y="120.0"/>
 		 <Components class="java.util.ArrayList">

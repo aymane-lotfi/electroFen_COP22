@@ -15,6 +15,12 @@ import java.util.List;
 @Root
 public class Actor
 {
+    @Attribute(name="Name")
+    private String mName = "";
+
+    @Attribute(name="Layer")
+    private int mLayer;
+
     @Element(name="Position")
     private Vector2 mPosition = null;
 
@@ -50,6 +56,17 @@ public class Actor
 
         //Position
         mPosition = pPos;
+    }
+
+    public String getName()
+    {
+        return mName;
+    }
+
+
+    public int getLayer()
+    {
+        return mLayer;
     }
 
     public void addComponent(Component pComp)
