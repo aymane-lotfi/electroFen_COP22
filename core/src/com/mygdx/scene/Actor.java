@@ -1,14 +1,15 @@
 package com.mygdx.scene;
 
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.mygdx.components.Component;
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.ElementList;
-import org.simpleframework.xml.Root;
+import com.mygdx.game.ElectroFunCop22;
+import org.simpleframework.xml.*;
+import org.simpleframework.xml.core.Persister;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -121,6 +122,26 @@ public class Actor
         }
 
         return null;
+    }
+
+    public static Actor load(String pActorFilePath)
+    {
+        Serializer _serializer = new Persister();
+        File _actorFile = new File(pActorFilePath);
+        Actor _actor = null;
+
+        try
+        {
+            _actor = _serializer.read(Actor.class, _actorFile);
+        }
+        catch(Exception e)
+        {
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "[Actor - load(File)] error : "+e.toString());
+        }
+        finally
+        {
+            return _actor;
+        }
     }
 
     public void load()

@@ -7,13 +7,13 @@
 	 	<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png" />            
          </Components>
       </actor>
-      <actor Name="bano" Layer="1">
-         <Position x="8.0" y="15.0"/>
-         <Scale x="150.0" y="80.0"/>
-         <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bano.png" />            
-         </Components>
-      </actor>
+       <actor Name="marker1" Layer="1">
+           <Position x="8.0" y="15.0"/>
+           <Scale x="150.0" y="80.0"/>
+           <Components class="java.util.ArrayList">
+               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="1" isDrawable="false" />
+           </Components>
+       </actor>
       <actor Name="cuvette" Layer="0">
          <Position x="549.3333" y="21.0"/>
          <Scale x="64.0" y="80.0"/>
@@ -28,13 +28,13 @@
 		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/fota.png" />            
          </Components>
       </actor>
-      <actor Name="lavabo" Layer="1">
-         <Position x="428.00003" y="19.0"/>
-         <Scale x="80.0" y="120.0"/>
-         <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/lavabo.png" />            
-         </Components>
-      </actor>
+       <actor Name="marker2" Layer="1">
+           <Position x="428.00003" y="19.0"/>
+           <Scale x="80.0" y="120.0"/>
+           <Components class="java.util.ArrayList">
+               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="2" isDrawable="false" />
+           </Components>
+       </actor>
       <actor Name="mirror" Layer="1">
          <Position x="436.0" y="153.0"/>
          <Scale x="64.0" y="100.0"/>

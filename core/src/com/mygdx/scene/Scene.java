@@ -2,6 +2,8 @@ package com.mygdx.scene;
 
 import com.badlogic.gdx.Gdx;
 //import com.badlogic.gdx.math.Vector2;
+import com.mygdx.components.Component;
+import com.mygdx.components.MarkerComponent;
 import com.mygdx.config.Config;
 import com.mygdx.game.ElectroFunCop22;
 import org.simpleframework.xml.*;
@@ -49,6 +51,20 @@ public class Scene
             if(actor.selected(pPosition))
             {
                 return actor;
+            }
+        }
+
+        return null;
+    }
+
+    public MarkerComponent getMarker(int pNumber)
+    {
+        for(Actor actor : mActors)
+        {
+            MarkerComponent _comp = (MarkerComponent)actor.getComponent("MarkerComponent");
+            if(_comp != null && _comp.getNumber() == pNumber)
+            {
+                return _comp;
             }
         }
 

@@ -34,6 +34,15 @@ public class Event
         for(Action action : mActions)
         {
             action.execute();
+            /*
+            try {
+                Thread.sleep(4000);
+            }
+            catch(Exception e)
+            {
+
+            }
+            */
         }
     }
 }

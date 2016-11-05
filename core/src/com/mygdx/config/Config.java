@@ -21,8 +21,10 @@ public class Config
     );
 
     public static List<String> EVENTS_LIST = Arrays.asList(
-            EVENTS_PATH+"/eau/cleaning_clothes.xml",
-            EVENTS_PATH+"/eau/cleaning_girl.xml"
+            //EVENTS_PATH+"/eau/cleaning_clothes.xml", //test
+            //EVENTS_PATH+"/eau/cleaning_girl.xml", //test
+            EVENTS_PATH+"/eau/add_bano.xml",
+            EVENTS_PATH+"/eau/add_lavabo.xml"
     );
 
 }

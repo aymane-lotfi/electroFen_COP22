@@ -73,7 +73,12 @@ public class Editor implements InputProcessor
         //Girl animations test
         if(keycode == Input.Keys.A)
         {
-            EventManager.Instance.executeEvent("cleaning_girl");
+            EventManager.Instance.executeEvent("add_bano");
+        }
+
+        if(keycode == Input.Keys.Z)
+        {
+            EventManager.Instance.executeEvent("add_lavabo");
         }
 
         //Selecting layer
