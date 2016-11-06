@@ -81,6 +81,11 @@ public class Editor implements InputProcessor
             EventManager.Instance.executeEvent("add_lavabo");
         }
 
+        if(keycode == Input.Keys.T)
+        {
+           SceneManager.Instance.changeScene("Terre");
+        }
+
         //Selecting layer
         if(keycode == Input.Keys.B) //Background
         {

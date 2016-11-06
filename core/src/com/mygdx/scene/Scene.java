@@ -5,6 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.mygdx.components.Component;
 import com.mygdx.components.MarkerComponent;
 import com.mygdx.config.Config;
+import com.mygdx.events.Event;
+import com.mygdx.events.EventManager;
 import com.mygdx.game.ElectroFunCop22;
 import org.simpleframework.xml.*;
 import org.simpleframework.xml.core.Persister;
@@ -21,6 +23,19 @@ public class Scene
     @ElementList(name="Actors")
     private List<Actor> mActors = new ArrayList<Actor>();
 
+    int mTimeWaitToExecEvent = 1000;
+    boolean mJustChanged = false;
+    private List<String> mEvents = new ArrayList<String>();
+
+    public void addEvent(String pEvent)
+    {
+        mEvents.add(pEvent);
+    }
+
+    void justChanged()
+    {
+        mJustChanged = true;
+    }
 
     public Scene(String pName)
     {
@@ -123,6 +138,22 @@ public class Scene
 
     public void update()
     {
+        if(mJustChanged)
+        {
+            try {
+                Thread.sleep(mTimeWaitToExecEvent);
+                for(String event : mEvents)
+                {
+                    EventManager.Instance.executeEvent(event);
+                }
+                mJustChanged = false;
+            }
+            catch(Exception e)
+            {
+                Gdx.app.error(ElectroFunCop22.APP_TAG, "[Scene - Update()] error :"+e.toString());
+            }
+        }
+
         for(Actor actor : mActors)
         {
             actor.update();

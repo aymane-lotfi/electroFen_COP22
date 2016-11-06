@@ -23,6 +23,7 @@ import com.mygdx.components.Component;
 import com.mygdx.config.Config;
 import com.mygdx.editor.Editor;
 import com.mygdx.events.EventManager;
+import com.mygdx.input.InputManager;
 import com.mygdx.scene.Actor;
 import com.mygdx.scene.Scene;
 import com.mygdx.scene.SceneManager;
@@ -44,6 +45,7 @@ public class ElectroFunCop22 extends ApplicationAdapter {
       //New game system
       SceneManager.create();
       EventManager.create();
+      InputManager.create();
 
        if(Config.enableEditor)
        {
@@ -52,7 +54,7 @@ public class ElectroFunCop22 extends ApplicationAdapter {
 
       SceneManager.Instance.load();
       EventManager.Instance.load();
-
+      InputManager.Instance.load();
       //
    }
 

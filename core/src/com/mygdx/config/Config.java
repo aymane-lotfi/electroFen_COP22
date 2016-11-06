@@ -16,8 +16,8 @@ public class Config
     public static String DEFAULT_SCENE = "Eau"; //The Scene's name
 
     public static List<String> SCENES_LIST = Arrays.asList(
-            SCENES_PATH+"/Eau.xml"
-            //SCENES_PATH+"/Feu.xml"
+            SCENES_PATH+"/Eau.xml",
+            SCENES_PATH+"/Terre.xml"
     );
 
     public static List<String> EVENTS_LIST = Arrays.asList(
