@@ -46,6 +46,7 @@ public class ElectroFunCop22 extends ApplicationAdapter {
       SceneManager.create();
       EventManager.create();
       InputManager.create();
+      GameManager.create();
 
        if(Config.enableEditor)
        {
@@ -55,6 +56,9 @@ public class ElectroFunCop22 extends ApplicationAdapter {
       SceneManager.Instance.load();
       EventManager.Instance.load();
       InputManager.Instance.load();
+      GameManager.Instance.load();
+
+      InputManager.Instance.addListener(GameManager.Instance);
       //
    }
 
@@ -75,8 +79,11 @@ public class ElectroFunCop22 extends ApplicationAdapter {
       // coordinate system specified by the camera.
       SceneManager.Instance.getSpriteBatch().setProjectionMatrix(camera.combined);
 
+
+
       SceneManager.Instance.draw();
 
+      SceneManager.Instance.update();
    }
 
    @Override

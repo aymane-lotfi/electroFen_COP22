@@ -23,7 +23,8 @@ public class Scene
     @ElementList(name="Actors")
     private List<Actor> mActors = new ArrayList<Actor>();
 
-    int mTimeWaitToExecEvent = 1000;
+    float timer;
+    int mTimeWaitToExecEvent = 250;
     boolean mJustChanged = false;
     private List<String> mEvents = new ArrayList<String>();
 
@@ -32,7 +33,7 @@ public class Scene
         mEvents.add(pEvent);
     }
 
-    void justChanged()
+    public void justChanged()
     {
         mJustChanged = true;
     }
@@ -130,6 +131,8 @@ public class Scene
 
     public void load()
     {
+        timer = mTimeWaitToExecEvent;
+
         for(Actor actor : mActors)
         {
             actor.load();
@@ -140,17 +143,21 @@ public class Scene
     {
         if(mJustChanged)
         {
-            try {
-                Thread.sleep(mTimeWaitToExecEvent);
+            timer -= 100*Gdx.graphics.getDeltaTime();
+            Gdx.app.log(ElectroFunCop22.APP_TAG, "timer = "+timer);
+
+            if(timer < 0)
+            {
+                int _index = 0;
                 for(String event : mEvents)
                 {
+                    Gdx.app.log(ElectroFunCop22.APP_TAG, "[Scene - Update()] executing event "+event);
                     EventManager.Instance.executeEvent(event);
+                    _index++;
                 }
+                timer = mTimeWaitToExecEvent;
                 mJustChanged = false;
-            }
-            catch(Exception e)
-            {
-                Gdx.app.error(ElectroFunCop22.APP_TAG, "[Scene - Update()] error :"+e.toString());
+                mEvents.clear();
             }
         }
 

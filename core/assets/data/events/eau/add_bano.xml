@@ -3,6 +3,6 @@
         <actions class="com.mygdx.events.ActionAdd" Action="add_bano" Actor="" Animation=""
                  ActorPath="data/actors/bano.xml"
                  MarkerNumber="1"/>
-        <actions class="com.mygdx.events.ActionAnimate" Action="clean_girl" Actor="girl" Animation="girl_clean" />
+        <actions class="com.mygdx.events.ActionAnimate" Action="clean_clothes" Actor="girl" Animation="clothes_clean" />
     </Actions>
 </event>

@@ -1,5 +1,7 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.Gdx;
+import com.mygdx.events.EventManager;
 import com.mygdx.input.InputData;
 import com.mygdx.input.InputListener;
 import com.mygdx.scene.Scene;
@@ -64,24 +66,52 @@ public class GameManager implements InputListener
             case LAVABO_PLUGED_IN:
                 if(!isLavaboPlugedIn)
                 {
-                    if(_currentScene != null && !_currentScene.getName().equals("Eau"))
+                    if(_currentScene != null)
                     {
-                        //TODO add Events to scene
-                        SceneManager.Instance.changeScene("Eau");
+                        if(!_currentScene.getName().equals("Eau"))
+                        {
+                            //TODO add Events to scene
+                            SceneManager.Instance.changeScene("Eau");
+                            Scene _newScene = SceneManager.Instance.getCurrentScene();
+                            _newScene.addEvent("add_lavabo");
+                            _newScene.justChanged();
+                        }
+                        else
+                        {
+                            EventManager.Instance.executeEvent("add_lavabo");
+                        }
+                        isLavaboPlugedIn = true;
                     }
-                    isLavaboPlugedIn = true;
+                    else
+                    {
+                        Gdx.app.error(ElectroFunCop22.APP_TAG, "[GameManager - notify()] current scene is null");
+                    }
                 }
                 break;
 
             case BANO_PLUGED_IN:
                 if(!isBanoPlugedIn)
                 {
-                    if(_currentScene != null && !_currentScene.getName().equals("Eau"))
+                    if(_currentScene != null)
                     {
-                        //TODO add Events to scene
-                        SceneManager.Instance.changeScene("Eau");
+                        if(!_currentScene.getName().equals("Eau"))
+                        {
+                            //TODO add Events to scene
+                            SceneManager.Instance.changeScene("Eau");
+                            Scene _newScene = SceneManager.Instance.getCurrentScene();
+                            _newScene.addEvent("add_bano");
+                            _newScene.justChanged();
+                        }
+                        else
+                        {
+                            EventManager.Instance.executeEvent("add_bano");
+                        }
+                        isBanoPlugedIn = true;
                     }
-                    isBanoPlugedIn = true;
+                    else
+                    {
+                        Gdx.app.error(ElectroFunCop22.APP_TAG, "[GameManager - notify()] current scene is null");
+                    }
                 }
                 break;
         }

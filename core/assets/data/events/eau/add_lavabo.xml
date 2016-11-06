@@ -3,6 +3,6 @@
         <actions class="com.mygdx.events.ActionAdd" Action="add_lavabo" Actor="" Animation=""
                  ActorPath="data/actors/lavabo.xml"
                  MarkerNumber="2"/>
-        <actions class="com.mygdx.events.ActionAnimate" Action="clean_clothes" Actor="girl" Animation="clothes_clean" />
+             <actions class="com.mygdx.events.ActionAnimate" Action="clean_girl" Actor="girl" Animation="girl_clean" />
     </Actions>
 </event>

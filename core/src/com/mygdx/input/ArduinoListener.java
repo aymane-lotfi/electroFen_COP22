@@ -49,7 +49,15 @@ public class ArduinoListener implements SerialPortDataListener
                 obj = new JSONObject(arduinoData);
                System.out.println("earth action number:" + obj.getInt("water"));
                 Gdx.app.log(ElectroFunCop22.APP_TAG, "Water element : "+obj.getInt("water"));
-                final int _value = obj.getInt("water");
+
+                final InputData _data = new InputData();
+                _data.water = obj.getInt("water");
+                _data.air = obj.getInt("air");
+                //_data.earth1 = obj.getInt("earth1");
+                //_data.earth2 = obj.getInt("earth2");
+                //_data.earth2 = obj.getInt("earth3");
+
+                //final int _value = obj.getInt("water");
                 new Thread(new Runnable(){
                     @Override
                     public void run(){
@@ -59,8 +67,8 @@ public class ArduinoListener implements SerialPortDataListener
                             @Override
                             public void run()
                             {
-                                getElementWaterElement(_value);
-
+                                //getElementWaterElement(_value);
+                                InputManager.Instance.notify(_data);
                             }
                         });
                     }
