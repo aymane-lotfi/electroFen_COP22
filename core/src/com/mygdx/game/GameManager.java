@@ -34,12 +34,16 @@ public class GameManager implements InputListener
 
         //Eau
         final int LAVABO_PLUGED_IN = 1;
-        final int BANO_PLUGED_IN = 2;
+        final int BANO_PLUGED_IN = 3;
 
         boolean isLavaboPlugedIn = false;
         boolean isBanoPlugedIn = false;
 
-        //Terre
+        //Air
+        final int TREE_0_PLUGEDIN = 2;
+        final int TREE_1_PLUGEDIN = 4;
+        final int TREE_2_PLUGEDIN = 5;
+
         boolean isTree0PlugedIn = false;
         boolean isTree1PlugedIn = false;
         boolean isTree2PlugedIn = false;
@@ -59,6 +63,76 @@ public class GameManager implements InputListener
     public void notify(InputData pData)
     {
         Scene _currentScene = SceneManager.Instance.getCurrentScene();
+
+        //Air
+        if( pData.earth1 == TREE_0_PLUGEDIN || pData.earth2 == TREE_1_PLUGEDIN || pData.earth3 == TREE_2_PLUGEDIN)
+        {
+            if(_currentScene != null) {
+                if (!_currentScene.getName().equals("Terre")) {
+                    //TODO add Events to scene
+                    SceneManager.Instance.changeScene("Terre");
+                    Scene _newScene = SceneManager.Instance.getCurrentScene();
+
+                    if(pData.earth1 == TREE_0_PLUGEDIN)
+                    {
+                        if(!isTree0PlugedIn)
+                        {
+                            _newScene.addEvent("add_tree_0");
+                            isTree0PlugedIn = true;
+                        }
+                    }
+
+                    if(pData.earth2 == TREE_1_PLUGEDIN)
+                    {
+                        if(!isTree1PlugedIn)
+                        {
+                            _newScene.addEvent("add_tree_1");
+                            isTree1PlugedIn = true;
+                        }
+                    }
+
+                    if(pData.earth3 == TREE_2_PLUGEDIN)
+                    {
+                        if(!isTree2PlugedIn)
+                        {
+                            _newScene.addEvent("add_tree_2");
+                            isTree2PlugedIn = true;
+                        }
+                    }
+                    _newScene.justChanged();
+                }
+                else
+                {
+                    if(pData.earth1 == TREE_0_PLUGEDIN)
+                    {
+                        if(!isTree0PlugedIn)
+                        {
+                            EventManager.Instance.executeEvent("add_tree_0");
+                            isTree0PlugedIn = true;
+                        }
+                    }
+
+                    if(pData.earth2 == TREE_1_PLUGEDIN)
+                    {
+                        if(!isTree1PlugedIn)
+                        {
+                            EventManager.Instance.executeEvent("add_tree_1");
+                            isTree1PlugedIn = true;
+                        }
+                    }
+
+                    if(pData.earth3 == TREE_2_PLUGEDIN)
+                    {
+                        if(!isTree2PlugedIn)
+                        {
+                            EventManager.Instance.executeEvent("add_tree_2");
+                            isTree2PlugedIn = true;
+                        }
+                    }
+
+                }
+            }
+        }
 
         //eau
         switch(pData.water)
