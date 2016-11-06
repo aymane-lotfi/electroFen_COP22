@@ -77,6 +77,8 @@
                           <animation Name="girl_clean" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.5"/>
 
 		          <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.5"/>
+			<animation Name="clean_dirty_clothes" AnimationSheet="data/actors/girl/animations/clean_dirty_clothes.PNG" FramesCount="4" Speed="0.5"/>
+
 		       </Animations>
 		    </component>
 		 </Components>

@@ -1,5 +1,7 @@
 package com.mygdx.events;
 
+import com.badlogic.gdx.Gdx;
+import com.mygdx.game.ElectroFunCop22;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
@@ -31,18 +33,10 @@ public class Event
 
     public void execute()
     {
+        Gdx.app.log(ElectroFunCop22.APP_TAG, "[Event - execute()] execute event : "+mName);
         for(Action action : mActions)
         {
             action.execute();
-            /*
-            try {
-                Thread.sleep(4000);
-            }
-            catch(Exception e)
-            {
-
-            }
-            */
         }
     }
 }

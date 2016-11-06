@@ -144,7 +144,7 @@ public class Scene
         if(mJustChanged)
         {
             timer -= 100*Gdx.graphics.getDeltaTime();
-            Gdx.app.log(ElectroFunCop22.APP_TAG, "timer = "+timer);
+            //Gdx.app.log(ElectroFunCop22.APP_TAG, "timer = "+timer);
 
             if(timer < 0)
             {

@@ -73,12 +73,27 @@ public class GameManager implements InputListener
                             //TODO add Events to scene
                             SceneManager.Instance.changeScene("Eau");
                             Scene _newScene = SceneManager.Instance.getCurrentScene();
-                            _newScene.addEvent("add_lavabo");
+                            if(isBanoPlugedIn)
+                            {
+                                _newScene.addEvent("add_lavabo_dirty");
+                            }
+                            else
+                            {
+                                _newScene.addEvent("add_lavabo_clean");
+                            }
+
                             _newScene.justChanged();
                         }
                         else
                         {
-                            EventManager.Instance.executeEvent("add_lavabo");
+                            if(isBanoPlugedIn)
+                            {
+                                EventManager.Instance.executeEvent("add_lavabo_dirty");
+                            }
+                            else
+                            {
+                                EventManager.Instance.executeEvent("add_lavabo_clean");
+                            }
                         }
                         isLavaboPlugedIn = true;
                     }
@@ -99,12 +114,27 @@ public class GameManager implements InputListener
                             //TODO add Events to scene
                             SceneManager.Instance.changeScene("Eau");
                             Scene _newScene = SceneManager.Instance.getCurrentScene();
-                            _newScene.addEvent("add_bano");
+                            if(isLavaboPlugedIn)
+                            {
+                                _newScene.addEvent("add_bano_dirty");
+                            }
+                            else
+                            {
+                                _newScene.addEvent("add_bano_clean");
+                            }
+
                             _newScene.justChanged();
                         }
                         else
                         {
-                            EventManager.Instance.executeEvent("add_bano");
+                            if(isLavaboPlugedIn)
+                            {
+                                EventManager.Instance.executeEvent("add_bano_dirty");
+                            }
+                            else
+                            {
+                                EventManager.Instance.executeEvent("add_bano_clean");
+                            }
                         }
                         isBanoPlugedIn = true;
                     }
