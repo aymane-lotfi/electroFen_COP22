@@ -4,84 +4,91 @@
          <Position x="0.0" y="0.0"/>
          <Scale x="800.0" y="480.0"/>
          <Components class="java.util.ArrayList">
-	 	<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png" />            
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png"/>
          </Components>
       </actor>
-       <actor Name="marker1" Layer="1">
-           <Position x="8.0" y="15.0"/>
-           <Scale x="150.0" y="80.0"/>
-           <Components class="java.util.ArrayList">
-               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="1" isDrawable="false" />
-           </Components>
-       </actor>
-      <actor Name="cuvette" Layer="0">
-         <Position x="549.3333" y="21.0"/>
-         <Scale x="64.0" y="80.0"/>
+
+      <!--
+      <actor Name="lavabo" Layer="1">
+         <Position x="353.3333" y="51.0"/>
+         <Scale x="120.0" y="300.0"/>
          <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/cuvette.png" />            
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/lavabo.png"/>
          </Components>
       </actor>
-      <actor Name="fota" Layer="1">
-         <Position x="341.33334" y="63.0"/>
-         <Scale x="64.0" y="70.0"/>
-         <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/fota.png" />            
-         </Components>
-      </actor>
+      -->
+
        <actor Name="marker2" Layer="1">
-           <Position x="428.00003" y="19.0"/>
-           <Scale x="80.0" y="120.0"/>
+           <Position x="353.3333" y="51.0"/>
+           <Scale x="120.0" y="300.0"/>
            <Components class="java.util.ArrayList">
                <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="2" isDrawable="false" />
            </Components>
        </actor>
-      <actor Name="mirror" Layer="1">
-         <Position x="436.0" y="153.0"/>
-         <Scale x="64.0" y="100.0"/>
+
+      <actor Name="cuvette" Layer="1">
+         <Position x="5.333313" y="0.0"/>
+         <Scale x="260.0" y="160.0"/>
          <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/mirror.png" />            
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/cuvette.png"/>
          </Components>
       </actor>
+
+      <!--
+      <actor Name="bano" Layer="1">
+         <Position x="473.3333" y="39.0"/>
+         <Scale x="300.0" y="260.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bano.png"/>
+         </Components>
+      </actor>
+      -->
+
+      <actor Name="marker1" Layer="1">
+         <Position x="473.3333" y="39.0"/>
+         <Scale x="300.0" y="260.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="1" isDrawable="false" />
+         </Components>
+      </actor>
+
+
       <actor Name="placard" Layer="1">
-         <Position x="649.3333" y="22.0"/>
+         <Position x="205.33333" y="158.0"/>
          <Scale x="150.0" y="250.0"/>
          <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/placard.png" />            
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/placard.png"/>
          </Components>
       </actor>
-      <actor Name="rechach" Layer="1">
-         <Position x="16.0" y="91.0"/>
-         <Scale x="64.0" y="100.0"/>
+
+      <actor Name="window" Layer="1">
+         <Position x="578.6667" y="187.0"/>
+         <Scale x="200.0" y="260.0"/>
          <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/rechach.png" />            
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/window.png"/>
          </Components>
       </actor>
-      <actor Name="soap" Layer="1">
-         <Position x="430.6667" y="122.0"/>
-         <Scale x="20.0" y="20.0"/>
+      <actor Name="photo" Layer="1">
+         <Position x="5.333313" y="285.0"/>
+         <Scale x="120.0" y="120.0"/>
          <Components class="java.util.ArrayList">
-		<component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/soap.png" />            
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/photo.png"/>
          </Components>
       </actor>
-
-	<actor Name="girl" Layer="1">
-		 <Position x="160.0" y="10.0"/>
-		 <Scale x="60.0" y="90.0"/>
-		 <Components class="java.util.ArrayList">
-		    <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
-		       <Animations class="java.util.ArrayList">
-		          <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="0.5"/>
-
- 			  <animation Name="clothes_clean" AnimationSheet="data/actors/girl/animations/clothes_clean.PNG" FramesCount="4" Speed="0.5"/>
-                          
-                          <animation Name="girl_clean" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.5"/>
-
-		          <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.5"/>
-			<animation Name="clean_dirty_clothes" AnimationSheet="data/actors/girl/animations/clean_dirty_clothes.PNG" FramesCount="4" Speed="0.5"/>
-
-		       </Animations>
-		    </component>
-		 </Components>
+      <actor Name="girl" Layer="1">
+         <Position x="126.66666" y="15.0"/>
+         <Scale x="180.0" y="350.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="110.87756"/>
+                  <animation Name="clothes_clean" AnimationSheet="data/actors/girl/animations/clothes_clean.PNG" FramesCount="4" Speed="0.5"/>
+                  <animation Name="girl_clean" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.5"/>
+                  <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.5"/>
+                  <animation Name="clean_dirty_clothes" AnimationSheet="data/actors/girl/animations/clean_dirty_clothes.PNG" FramesCount="4" Speed="0.5"/>
+               </Animations>
+            </component>
+         </Components>
       </actor>
-  </Actors>   
+   </Actors>
 </scene>

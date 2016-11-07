@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Config
 {
-    public static boolean enableEditor = true;
+    public static boolean enableEditor = false;
 
     public static String SCENES_PATH = "scenes";
     public static String EVENTS_PATH = "data/events";
