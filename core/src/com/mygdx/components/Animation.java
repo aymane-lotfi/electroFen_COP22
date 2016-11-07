@@ -99,7 +99,7 @@ public class Animation
 
             if(mActor != null)
             {
-                SceneManager.Instance.getSpriteBatch().draw(mCurrentFrame, mActor.getPos().x, mActor.getPos().y);
+                SceneManager.Instance.getSpriteBatch().draw(mCurrentFrame, mActor.getPos().x, mActor.getPos().y, mActor.getScale().x, mActor.getScale().y);
             }
             else
             {
@@ -113,7 +113,7 @@ public class Animation
 
             if(mActor != null)
             {
-                SceneManager.Instance.getSpriteBatch().draw(mCurrentFrame, mActor.getPos().x, mActor.getPos().y);
+                SceneManager.Instance.getSpriteBatch().draw(mCurrentFrame, mActor.getPos().x, mActor.getPos().y, mActor.getScale().x, mActor.getScale().y);
             }
         }
 
