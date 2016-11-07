@@ -1,0 +1,7 @@
+<actor Name="tree_01" Layer="1">
+         <Position x="222.66667" y="122.0"/>
+         <Scale x="90.0" y="120.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/terre/tree_01.png"/>
+         </Components>
+</actor>
