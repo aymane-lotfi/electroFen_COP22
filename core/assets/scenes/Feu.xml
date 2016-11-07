@@ -1,8 +1,0 @@
-<scene name="Feu">
-   <Actors class="java.util.ArrayList">
-      <actor HasUVTextrue="false" SpritePath="data/feu/bucket.png">
-         <Position x="20.0" y="20.47531"/>
-         <Scale x="64.0" y="64.0"/>
-      </actor>
-   </Actors>
-</scene>
