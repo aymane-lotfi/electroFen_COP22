@@ -39,6 +39,13 @@ public class Config
             EVENTS_PATH+"/eau/window_tree2_appears.xml",
             EVENTS_PATH+"/eau/flower_blossoms.xml",
 
+            //Air-1
+            EVENTS_PATH+"/air-1/window_tree1_appears.xml",
+            EVENTS_PATH+"/air-1/window_tree2_appears.xml",
+            EVENTS_PATH+"/air-1/cloud_decrease_50.xml",
+            EVENTS_PATH+"/air-1/cloud_decrease_100.xml",
+            EVENTS_PATH+"/air-1/flowers_blossom.xml",
+
             //Air
             EVENTS_PATH+"/terre/add_tree_0.xml",
             EVENTS_PATH+"/terre/add_tree_1.xml",

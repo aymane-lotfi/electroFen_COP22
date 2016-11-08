@@ -15,7 +15,7 @@ public class Action
     @Attribute(name="Actor")
     protected String mActorName = "";
 
-    @Attribute(name="Animation")
+    @Attribute(name="Animation", required = false)
     protected String mAnimationName = "";
 
     public Action()

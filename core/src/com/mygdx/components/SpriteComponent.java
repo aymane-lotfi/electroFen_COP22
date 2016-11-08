@@ -19,10 +19,17 @@ public class SpriteComponent extends Component
 
     private Texture mSprite = null;
 
+    private boolean mActivated = true;
+
     public SpriteComponent()
     {
         mName = "SpriteComponent";
         mIsDrawable = true;
+    }
+
+    public void activate(boolean pValue)
+    {
+        mActivated = pValue;
     }
 
     public void load()
@@ -37,6 +44,9 @@ public class SpriteComponent extends Component
 
     public  void draw()
     {
+        if(!mActivated)
+            return;
+
         if(mActor != null && mActor.getPos() != null)
         {
             Batch _spriteBatch = SceneManager.Instance.getSpriteBatch();

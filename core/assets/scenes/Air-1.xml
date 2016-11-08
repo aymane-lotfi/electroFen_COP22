@@ -32,7 +32,12 @@
          <Position x="186.99998" y="331.73483"/>
          <Scale x="70.0" y="75.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/pot.png"/>
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="flower_default" AnimationSheet="data/actors/air-1/flower/animations/flower_default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="flower_blossoms" AnimationSheet="data/actors/air-1/flower/animations/flower_blossoms_anim.png" FramesCount="4" Speed="0.4"/>
+               </Animations>
+            </component>
          </Components>
       </actor>
       <actor Name="cloud_0" Layer="1">
@@ -70,9 +75,9 @@
             <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
                <Animations class="java.util.ArrayList">
                   <animation Name="default" AnimationSheet="data/actors/air-1/window/animations/window_default.png" FramesCount="1" Speed="3.53535E-4"/>
-                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree1_anim.png" FramesCount="3" Speed="0.35"/>
-                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree2_anim.png" FramesCount="3" Speed="0.35"/>
-                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree3_anim.png" FramesCount="3" Speed="0.35"/>
+                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree1_anim.png" FramesCount="4" Speed="0.4"/>
+                  <animation Name="window_tree2_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree2_anim.png" FramesCount="4" Speed="0.4"/>
+                  <animation Name="window_tree3_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree3_anim.png" FramesCount="4" Speed="0.4"/>
                </Animations>
             </component>
          </Components>
@@ -81,7 +86,12 @@
          <Position x="556.0" y="210.55008"/>
          <Scale x="40.0" y="40.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/pot.png"/>
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="flower_default" AnimationSheet="data/actors/air-1/flower/animations/flower_default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="flower_blossoms" AnimationSheet="data/actors/air-1/flower/animations/flower_blossoms_anim.png" FramesCount="4" Speed="0.4"/>
+               </Animations>
+            </component>
          </Components>
       </actor>
       <actor Name="fauteuil" Layer="1">
@@ -97,7 +107,7 @@
          <Components class="java.util.ArrayList">
             <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
                <Animations class="java.util.ArrayList">
-                  <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="90.91368"/>
+                  <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="0.4"/>
                   <animation Name="thanking0" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
                   <animation Name="thanking1" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
                   <animation Name="thanking2" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>

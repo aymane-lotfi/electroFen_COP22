@@ -55,6 +55,14 @@ public class GameManager implements InputListener
         boolean isWaterFilter09_in = false;
         boolean isWaterFilter10_in = false;
 
+        //Air-1
+        final int AIR_FILTER_01_IN = 1;
+        final int AIR_FILTER_02_IN = 2;
+        final int AIR_FILTER_03_IN = 3;
+        final int AIR_FILTER_04_IN = 4;
+        final int AIR_FILTER_05_IN = 5;
+        final int AIR_FILTER_06_IN = 6;
+
         //Air
         final int TREE_0_PLUGEDIN = 6;
         final int TREE_1_PLUGEDIN = 7;
@@ -90,7 +98,7 @@ public class GameManager implements InputListener
         }
     }
 
-    public void elementWaterReaction(int pValue)
+    private void elementWaterReaction(int pValue)
     {
         checkScene("Eau");
 
@@ -297,7 +305,7 @@ public class GameManager implements InputListener
         }
     }
 
-    void elementAirReaction(int pValue)
+    private void elementAirReaction_old(int pValue)
     {
         checkScene("Terre");
 
@@ -351,20 +359,96 @@ public class GameManager implements InputListener
         }
     }
 
+    private void elementAir1Reaction(int pValue)
+    {
+        checkScene("Air-1");
+
+        Scene _current = SceneManager.Instance.getCurrentScene();
+
+        if(_current == null)
+        {
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "[GameManager - elementAir1Reaction()] Air-1 scene not found, current scene is null");
+            return;
+        }
+
+        switch (pValue)
+        {
+            case AIR_FILTER_01_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("window_tree1_appears");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("window_tree1_appears");
+                }
+                break;
+            case AIR_FILTER_02_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("cloud_decrease_by_half");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("cloud_decrease_by_half");
+                }
+                break;
+            case AIR_FILTER_03_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("window_tree2_appears");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("window_tree2_appears");
+                }
+                break;
+            case AIR_FILTER_04_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("cloud_disappear");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("cloud_disappear");
+                }
+                break;
+            case AIR_FILTER_05_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("flowers_blossom");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("flowers_blossom");
+                }
+                break;
+            case AIR_FILTER_06_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("");
+                }
+                break;
+        }
+    }
+
     @Override
     public void notify(InputData pData)
     {
         Scene _currentScene = SceneManager.Instance.getCurrentScene();
 
         //Air
-        if( pData.earth1 == TREE_0_PLUGEDIN ||
-            pData.earth2 == TREE_1_PLUGEDIN ||
-            pData.earth3 == TREE_2_PLUGEDIN
+        if(
+            pData.air == AIR_FILTER_01_IN || pData.air == AIR_FILTER_04_IN ||
+            pData.air == AIR_FILTER_02_IN || pData.air == AIR_FILTER_05_IN ||
+            pData.air == AIR_FILTER_03_IN || pData.air == AIR_FILTER_06_IN
         )
         {
-            elementAirReaction(pData.earth1);
-            elementAirReaction(pData.earth2);
-            elementAirReaction(pData.earth3);
+            elementAir1Reaction(pData.air);
         }
 
         //eau
