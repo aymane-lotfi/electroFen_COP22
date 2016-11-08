@@ -38,6 +38,11 @@ public class Scene
         mJustChanged = true;
     }
 
+    public boolean isChanged()
+    {
+        return mJustChanged;
+    }
+
     public Scene(String pName)
     {
         mName = pName;

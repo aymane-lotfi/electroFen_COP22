@@ -1,0 +1,5 @@
+<event Name="serviettes_propres_1" Scene="Eau">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="serviettes_propres_1" Actor="placard" Animation="serviettes_propres_2" />
+    </Actions>
+</event>

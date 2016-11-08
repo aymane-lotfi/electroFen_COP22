@@ -1,0 +1,5 @@
+<event Name="window_tree2_appears" Scene="Eau">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="window_tree2_appears" Actor="window" Animation="window_tree2_appears" />
+    </Actions>
+</event>

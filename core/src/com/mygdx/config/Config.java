@@ -8,12 +8,12 @@ import java.util.List;
  */
 public class Config
 {
-    public static boolean enableEditor = false;
+    public static boolean enableEditor = true;
 
     public static String SCENES_PATH = "scenes";
     public static String EVENTS_PATH = "data/events";
 
-    public static String DEFAULT_SCENE = "Terre";//"Eau"; //The Scene's name
+    public static String DEFAULT_SCENE = "Eau";//"Terre";//"Eau"; //The Scene's name
 
     public static List<String> SCENES_LIST = Arrays.asList(
             SCENES_PATH+"/Terre.xml",
@@ -22,10 +22,21 @@ public class Config
 
     public static List<String> EVENTS_LIST = Arrays.asList(
             //Eau
-            EVENTS_PATH+"/eau/add_bano_0.xml",
-            EVENTS_PATH+"/eau/add_lavabo_0.xml",
-            EVENTS_PATH+"/eau/add_bano_1.xml",
-            EVENTS_PATH+"/eau/add_lavabo_1.xml",
+            EVENTS_PATH+"/eau/bano_coule.xml",
+            EVENTS_PATH+"/eau/lavabo_coule.xml",
+            EVENTS_PATH+"/eau/placard_propre_0.xml",
+            EVENTS_PATH+"/eau/placard_propre_1.xml",
+            EVENTS_PATH+"/eau/serviettes_propres_0.xml",
+            EVENTS_PATH+"/eau/serviettes_propres_1.xml",
+            EVENTS_PATH+"/eau/girl_clean_0.xml",
+            EVENTS_PATH+"/eau/girl_clean_1.xml",
+            EVENTS_PATH+"/eau/girl_clothes_clean_0.xml",
+            EVENTS_PATH+"/eau/girl_clothes_clean_1.xml",
+            EVENTS_PATH+"/eau/window_rain.xml",
+            EVENTS_PATH+"/eau/window_tree1_appears.xml",
+            EVENTS_PATH+"/eau/window_tree2_appears.xml",
+            EVENTS_PATH+"/eau/flower_blossoms.xml",
+
             //Air
             EVENTS_PATH+"/terre/add_tree_0.xml",
             EVENTS_PATH+"/terre/add_tree_1.xml",

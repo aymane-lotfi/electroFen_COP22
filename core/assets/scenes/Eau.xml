@@ -7,25 +7,25 @@
             <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png"/>
          </Components>
       </actor>
-
-      <!--
       <actor Name="lavabo" Layer="1">
-         <Position x="353.3333" y="51.0"/>
-         <Scale x="120.0" y="300.0"/>
+         <Position x="363.3333" y="51.0"/>
+         <Scale x="120.0" y="140.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/lavabo.png"/>
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="lavabo_default" AnimationSheet="data/actors/eau/lavabo/animations/default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="lavabo_coule" AnimationSheet="data/actors/eau/lavabo/animations/lavabo_anim.png" FramesCount="7" Speed="0.45"/>
+               </Animations>
+            </component>
          </Components>
       </actor>
-      -->
-
-       <actor Name="marker2" Layer="1">
-           <Position x="353.3333" y="51.0"/>
-           <Scale x="120.0" y="300.0"/>
-           <Components class="java.util.ArrayList">
-               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="2" isDrawable="false" />
-           </Components>
-       </actor>
-
+      <actor Name="mirroir" Layer="1">
+         <Position x="380.0" y="220.70522"/>
+         <Scale x="80.0" y="100.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/mirroir.PNG"/>
+         </Components>
+      </actor>
       <actor Name="cuvette" Layer="1">
          <Position x="5.333313" y="0.0"/>
          <Scale x="260.0" y="160.0"/>
@@ -33,39 +33,45 @@
             <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/cuvette.png"/>
          </Components>
       </actor>
-
-      <!--
       <actor Name="bano" Layer="1">
          <Position x="473.3333" y="39.0"/>
          <Scale x="300.0" y="260.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bano.png"/>
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="bano_default" AnimationSheet="data/actors/eau/bano/animations/default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="bano_coule" AnimationSheet="data/actors/eau/bano/animations/bano_anim.png" FramesCount="5" Speed="0.4"/>
+               </Animations>
+            </component>
          </Components>
       </actor>
-      -->
-
-      <actor Name="marker1" Layer="1">
-         <Position x="473.3333" y="39.0"/>
-         <Scale x="300.0" y="260.0"/>
-         <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="1" isDrawable="false" />
-         </Components>
-      </actor>
-
-
       <actor Name="placard" Layer="1">
          <Position x="205.33333" y="158.0"/>
          <Scale x="150.0" y="250.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/placard.png"/>
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="placard_default" AnimationSheet="data/actors/eau/placard/animations/default.png" FramesCount="1" Speed="6.06805E-4"/>
+                  <animation Name="placard_propre_1" AnimationSheet="data/actors/eau/placard/animations/placard_propre_serviettes_dirty_anim.png" FramesCount="2" Speed="0.3"/>
+                  <animation Name="placard_propre_2" AnimationSheet="data/actors/eau/placard/animations/placard_propre_serviettes_propres_anim.png" FramesCount="2" Speed="0.3"/>
+                  <animation Name="serviettes_propres_1" AnimationSheet="data/actors/eau/placard/animations/serviettes_propre_placard_propre_anim.png" FramesCount="3" Speed="0.4"/>
+                  <animation Name="serviettes_propres_2" AnimationSheet="data/actors/eau/placard/animations/serviettes_propres_placard_dirty_anim.png" FramesCount="3" Speed="0.4"/>
+               </Animations>
+            </component>
          </Components>
       </actor>
-
       <actor Name="window" Layer="1">
          <Position x="578.6667" y="187.0"/>
          <Scale x="200.0" y="260.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/window.png"/>
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="window_default" AnimationSheet="data/actors/eau/window/animations/default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="window_rain" AnimationSheet="data/actors/eau/window/animations/rain_anim.png" FramesCount="8" Speed="0.3"/>
+                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/eau/window/animations/tree1_appears_anim.png" FramesCount="3" Speed="0.4"/>
+                  <animation Name="window_tree2_appears" AnimationSheet="data/actors/eau/window/animations/tree2_appears_anim.png" FramesCount="3" Speed="0.4"/>
+               </Animations>
+            </component>
          </Components>
       </actor>
       <actor Name="photo" Layer="1">
@@ -75,17 +81,29 @@
             <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/photo.png"/>
          </Components>
       </actor>
+      <actor Name="flower" Layer="1">
+         <Position x="598.0" y="198.36389"/>
+         <Scale x="64.0" y="70.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="flower_default" AnimationSheet="data/actors/eau/flower/animations/flower_default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="flower_blossoms" AnimationSheet="data/actors/eau/flower/animations/flower_blossoms_anim.png" FramesCount="4" Speed="0.4"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
       <actor Name="girl" Layer="1">
          <Position x="126.66666" y="15.0"/>
          <Scale x="120.0" y="250.0"/>
          <Components class="java.util.ArrayList">
             <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
                <Animations class="java.util.ArrayList">
-                  <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="110.87756"/>
-                  <animation Name="clothes_clean" AnimationSheet="data/actors/girl/animations/clothes_clean.PNG" FramesCount="4" Speed="0.5"/>
-                  <animation Name="girl_clean" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.5"/>
-                  <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.5"/>
-                  <animation Name="clean_dirty_clothes" AnimationSheet="data/actors/girl/animations/clean_dirty_clothes.PNG" FramesCount="4" Speed="0.5"/>
+                  <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="0.45"/>
+                  <animation Name="clothes_clean" AnimationSheet="data/actors/girl/animations/clothes_clean.PNG" FramesCount="4" Speed="0.45"/>
+                  <animation Name="girl_clean" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.45"/>
+                  <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                  <animation Name="clean_dirty_clothes" AnimationSheet="data/actors/girl/animations/clean_dirty_clothes.PNG" FramesCount="4" Speed="0.45"/>
                </Animations>
             </component>
          </Components>

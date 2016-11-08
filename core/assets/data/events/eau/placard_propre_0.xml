@@ -1,0 +1,5 @@
+<event Name="placard_propre_0" Scene="Eau">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="placard_propre_0" Actor="placard" Animation="placard_propre_1" />
+    </Actions>
+</event>

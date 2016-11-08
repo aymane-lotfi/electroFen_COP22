@@ -1,0 +1,5 @@
+<event Name="lavabo_coule" Scene="Eau">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="lavabo_coule" Actor="lavabo" Animation="lavabo_coule" />
+    </Actions>
+</event>

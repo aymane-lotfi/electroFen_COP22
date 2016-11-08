@@ -1,0 +1,5 @@
+<event Name="flower_blossoms" Scene="Eau">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="flower_blossoms" Actor="flower" Animation="flower_blossoms" />
+    </Actions>
+</event>
