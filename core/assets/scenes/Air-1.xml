@@ -1,0 +1,109 @@
+<scene name="Air-1">
+   <Actors class="java.util.ArrayList">
+      <actor Name="bg" Layer="0">
+         <Position x="0.0" y="0.0"/>
+         <Scale x="800.0" y="480.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/bg.png"/>
+         </Components>
+      </actor>
+      <actor Name="clock" Layer="1">
+         <Position x="86.0" y="283.66714"/>
+         <Scale x="64.0" y="64.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/clock.png"/>
+         </Components>
+      </actor>
+      <actor Name="biblio" Layer="1">
+         <Position x="201.0" y="111.706635"/>
+         <Scale x="120.0" y="220.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/biblio.png"/>
+         </Components>
+      </actor>
+      <actor Name="tv" Layer="1">
+         <Position x="13.0" y="106.96756"/>
+         <Scale x="180.0" y="160.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/tv.png"/>
+         </Components>
+      </actor>
+      <actor Name="pot1" Layer="1">
+         <Position x="186.99998" y="331.73483"/>
+         <Scale x="70.0" y="75.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/pot.png"/>
+         </Components>
+      </actor>
+      <actor Name="cloud_0" Layer="1">
+         <Position x="33.0" y="207.84203"/>
+         <Scale x="120.0" y="120.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/cloud.png"/>
+         </Components>
+      </actor>
+      <actor Name="cloud_1" Layer="1">
+         <Position x="421.0" y="229.50635"/>
+         <Scale x="120.0" y="120.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/cloud.png"/>
+         </Components>
+      </actor>
+      <actor Name="cloud_2" Layer="1">
+         <Position x="329.0" y="318.19464"/>
+         <Scale x="120.0" y="120.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/cloud.png"/>
+         </Components>
+      </actor>
+      <actor Name="cloud_3" Layer="1">
+         <Position x="136.0" y="337.15094"/>
+         <Scale x="120.0" y="120.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/cloud.png"/>
+         </Components>
+      </actor>
+      <actor Name="window" Layer="1">
+         <Position x="520.0" y="154.35825"/>
+         <Scale x="250.0" y="230.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="default" AnimationSheet="data/actors/air-1/window/animations/window_default.png" FramesCount="1" Speed="3.53535E-4"/>
+                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree1_anim.png" FramesCount="3" Speed="0.35"/>
+                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree2_anim.png" FramesCount="3" Speed="0.35"/>
+                  <animation Name="window_tree1_appears" AnimationSheet="data/actors/air-1/window/animations/window_tree3_anim.png" FramesCount="3" Speed="0.35"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+      <actor Name="pot2" Layer="1">
+         <Position x="556.0" y="210.55008"/>
+         <Scale x="40.0" y="40.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/pot.png"/>
+         </Components>
+      </actor>
+      <actor Name="fauteuil" Layer="1">
+         <Position x="375.0" y="83.94922"/>
+         <Scale x="365.0" y="180.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/air-1/fauteuil.png"/>
+         </Components>
+      </actor>
+      <actor Name="girl" Layer="1">
+         <Position x="298.0" y="66.34697"/>
+         <Scale x="120.0" y="250.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="default" AnimationSheet="data/actors/girl/animations/default.PNG" FramesCount="4" Speed="90.91368"/>
+                  <animation Name="thanking0" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                  <animation Name="thanking1" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                  <animation Name="thanking2" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+   </Actors>
+</scene>
