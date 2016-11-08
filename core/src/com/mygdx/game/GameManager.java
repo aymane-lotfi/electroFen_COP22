@@ -33,11 +33,11 @@ public class GameManager implements InputListener
     //Game state
 
         //Eau
-        final int WATER_FILTER_01_IN = 5;
+        final int WATER_FILTER_01_IN = 1;
         final int WATER_FILTER_02_IN = 2;
         final int WATER_FILTER_03_IN = 3;
         final int WATER_FILTER_04_IN = 4;
-        final int WATER_FILTER_05_IN = 1;
+        final int WATER_FILTER_05_IN = 5;
         final int WATER_FILTER_06_IN = 6;
         final int WATER_FILTER_07_IN = 7;
         final int WATER_FILTER_08_IN = 8;
