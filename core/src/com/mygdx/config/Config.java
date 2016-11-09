@@ -13,7 +13,7 @@ public class Config
     public static String SCENES_PATH = "scenes";
     public static String EVENTS_PATH = "data/events";
 
-    public static String DEFAULT_SCENE = "Air-1";//"Eau";//"Terre";//"Eau"; //The Scene's name
+    public static String DEFAULT_SCENE = "Eau";//;//"Terre";//"Eau"; //The Scene's name
 
     public static List<String> SCENES_LIST = Arrays.asList(
             SCENES_PATH+"/Eau.xml",
