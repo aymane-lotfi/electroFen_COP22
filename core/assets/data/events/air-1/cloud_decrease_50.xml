@@ -1,0 +1,6 @@
+<event Name="cloud_decrease_by_half" Scene="Air-1">
+    <Actions>
+        <actions class="com.mygdx.events.ActionHide" Action="hide_cloud_0" Actor="cloud_0" />
+        <actions class="com.mygdx.events.ActionHide" Action="hide_cloud_3" Actor="cloud_3" />
+    </Actions>
+</event>

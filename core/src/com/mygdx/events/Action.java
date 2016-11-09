@@ -12,7 +12,7 @@ public class Action
     @Attribute(name="Action")
     protected String mActionName = "";
 
-    @Attribute(name="Actor")
+    @Attribute(name="Actor", required = false)
     protected String mActorName = "";
 
     @Attribute(name="Animation", required = false)

@@ -34,6 +34,27 @@ public class SceneManager
     private Batch mSpriteBatch = new SpriteBatch();
     private Scene mCurrentScene = null;
 
+    private boolean mScheduleSceneChange = false;
+    private float mScheduleSceneChangeTimer = 0;
+    private String mNextSceneName = "";
+
+    public Scene getScene(String pName)
+    {
+        for(Scene scene: mScenes)
+        {
+            if(scene.getName().equals(pName))
+            {
+                return scene;
+            }
+        }
+        return null;
+    }
+
+    public boolean sceneExists(String pName)
+    {
+        return (getScene(pName) != null);
+    }
+
     public void addScene(Scene pScene)
     {
         mCurrentScene = pScene; //TODO delete it just for test
@@ -86,6 +107,13 @@ public class SceneManager
         }
     }
 
+    public void scheduleChangeScene(String pSceneName, float pTimer)
+    {
+        mScheduleSceneChange = true;
+        mScheduleSceneChangeTimer = pTimer;
+        mNextSceneName = pSceneName;
+    }
+
     public void load()
     {
         //Load all scenes from configuration file
@@ -121,9 +149,23 @@ public class SceneManager
 
     public void update()
     {
-        for(Scene scene : mScenes)
+        if(mScheduleSceneChange)
         {
-            scene.update();
+            mScheduleSceneChangeTimer -= 10 * Gdx.graphics.getDeltaTime();
+
+            if(mScheduleSceneChangeTimer < 0)
+            {
+                changeScene(mNextSceneName);
+                mCurrentScene.justChanged();
+                mScheduleSceneChange = false;
+                mScheduleSceneChangeTimer = 0;
+                mNextSceneName = "";
+            }
+        }
+
+        if(mCurrentScene != null)
+        {
+            mCurrentScene.update();
         }
     }
 

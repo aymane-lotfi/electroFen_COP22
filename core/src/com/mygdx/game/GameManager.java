@@ -56,21 +56,29 @@ public class GameManager implements InputListener
         boolean isWaterFilter10_in = false;
 
         //Air-1
+        boolean isElementAir1Done = false;
+
         final int AIR_FILTER_01_IN = 1;
         final int AIR_FILTER_02_IN = 2;
         final int AIR_FILTER_03_IN = 3;
         final int AIR_FILTER_04_IN = 4;
         final int AIR_FILTER_05_IN = 5;
+
+
+        boolean isAirFilter01_in = false;
+        boolean isAirFilter02_in = false;
+        boolean isAirFilter03_in = false;
+        boolean isAirFilter04_in = false;
+        boolean isAirFilter05_in = false;
+
+        //Air-2
         final int AIR_FILTER_06_IN = 6;
+        final int AIR_FILTER_07_IN = 7;
+        final int AIR_FILTER_08_IN = 8;
 
-        //Air
-        final int TREE_0_PLUGEDIN = 6;
-        final int TREE_1_PLUGEDIN = 7;
-        final int TREE_2_PLUGEDIN = 8;
-
-        boolean isTree0PlugedIn = false;
-        boolean isTree1PlugedIn = false;
-        boolean isTree2PlugedIn = false;
+        boolean isAirFilter06_in = false;
+        boolean isAirFilter07_in = false;
+        boolean isAirFilter08_in = false;
     //
 
     public void load()
@@ -305,57 +313,49 @@ public class GameManager implements InputListener
         }
     }
 
-    private void elementAirReaction_old(int pValue)
+    private void elementAir2Reaction(int pValue)
     {
-        checkScene("Terre");
+        checkScene("Air-2");
 
-        if(pValue == TREE_0_PLUGEDIN)
+        Scene _current = SceneManager.Instance.getCurrentScene();
+
+        if(_current == null)
         {
-            if(!isTree0PlugedIn)
-            {
-                if(SceneManager.Instance.getCurrentScene().isChanged())
-                {
-                    SceneManager.Instance.getCurrentScene().addEvent("add_tree_0");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("add_tree_0");
-                }
-                isTree0PlugedIn = true;
-            }
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "[GameManager - elementAir1Reaction()] Air-1 scene not found, current scene is null");
+            return;
         }
 
-        if(pValue == TREE_1_PLUGEDIN)
-        {
-            if(!isTree1PlugedIn)
-            {
-                if(SceneManager.Instance.getCurrentScene().isChanged())
-                {
-                    SceneManager.Instance.getCurrentScene().addEvent("add_tree_1");
+        switch (pValue) {
+            case AIR_FILTER_06_IN:
+                if (!isAirFilter06_in) {
+                    if (_current.isChanged()) {
+                        _current.addEvent("add_tree_0");
+                    } else {
+                        EventManager.Instance.executeEvent("add_tree_0");
+                    }
+                    isAirFilter06_in = true;
                 }
-                else
-                {
-                    EventManager.Instance.executeEvent("add_tree_1");
+                break;
+            case AIR_FILTER_07_IN:
+                if (!isAirFilter07_in) {
+                    if (_current.isChanged()) {
+                        _current.addEvent("add_tree_1");
+                    } else {
+                        EventManager.Instance.executeEvent("add_tree_1");
+                    }
+                    isAirFilter07_in = true;
                 }
-                isTree1PlugedIn = true;
-            }
-        }
-
-        if(pValue == TREE_2_PLUGEDIN)
-        {
-            if(!isTree2PlugedIn)
-            {
-                if(SceneManager.Instance.getCurrentScene().isChanged())
-                {
-                    SceneManager.Instance.getCurrentScene().addEvent("add_tree_3");
+                break;
+            case AIR_FILTER_08_IN:
+                if (!isAirFilter08_in) {
+                    if (_current.isChanged()) {
+                        _current.addEvent("add_tree_2");
+                    } else {
+                        EventManager.Instance.executeEvent("add_tree_2");
+                    }
+                    isAirFilter08_in = true;
                 }
-                else
-                {
-                    EventManager.Instance.executeEvent("add_tree_3");
-                }
-
-                isTree2PlugedIn = true;
-            }
+                break;
         }
     }
 
@@ -374,63 +374,64 @@ public class GameManager implements InputListener
         switch (pValue)
         {
             case AIR_FILTER_01_IN:
-                if(_current.isChanged())
+                if(!isAirFilter01_in)
                 {
-                    _current.addEvent("window_tree1_appears");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("window_tree1_appears");
+                    if (_current.isChanged())
+                    {
+                        _current.addEvent("window_tree1_appears");
+                    } else
+                    {
+                        EventManager.Instance.executeEvent("window_tree1_appears");
+                    }
+                    isAirFilter01_in = true;
                 }
                 break;
             case AIR_FILTER_02_IN:
-                if(_current.isChanged())
-                {
-                    _current.addEvent("cloud_decrease_by_half");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("cloud_decrease_by_half");
+                if(!isAirFilter02_in) {
+                    if (_current.isChanged()) {
+                        _current.addEvent("cloud_decrease_by_half");
+                    } else {
+                        EventManager.Instance.executeEvent("cloud_decrease_by_half");
+                    }
+                    isAirFilter02_in = true;
                 }
                 break;
             case AIR_FILTER_03_IN:
-                if(_current.isChanged())
-                {
-                    _current.addEvent("window_tree2_appears");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("window_tree2_appears");
+                if(!isAirFilter03_in) {
+                    if (_current.isChanged()) {
+                        _current.addEvent("window_tree2_appears");
+                    } else {
+                        EventManager.Instance.executeEvent("window_tree2_appears");
+                    }
+                    isAirFilter03_in = true;
                 }
                 break;
             case AIR_FILTER_04_IN:
-                if(_current.isChanged())
+                if(!isAirFilter04_in)
                 {
-                    _current.addEvent("cloud_disappear");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("cloud_disappear");
+                    if(_current.isChanged())
+                    {
+                        _current.addEvent("cloud_disappear");
+                    }
+                    else
+                    {
+                        EventManager.Instance.executeEvent("cloud_disappear");
+                    }
+                    isAirFilter04_in = true;
                 }
                 break;
             case AIR_FILTER_05_IN:
-                if(_current.isChanged())
+                if(!isAirFilter05_in)
                 {
-                    _current.addEvent("flowers_blossom");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("flowers_blossom");
-                }
-                break;
-            case AIR_FILTER_06_IN:
-                if(_current.isChanged())
-                {
-                    _current.addEvent("");
-                }
-                else
-                {
-                    EventManager.Instance.executeEvent("");
+                    if(_current.isChanged())
+                    {
+                        _current.addEvent("flowers_blossom");
+                    }
+                    else
+                    {
+                        EventManager.Instance.executeEvent("flowers_blossom");
+                    }
+                    isAirFilter05_in = true;
                 }
                 break;
         }
@@ -439,16 +440,32 @@ public class GameManager implements InputListener
     @Override
     public void notify(InputData pData)
     {
-        Scene _currentScene = SceneManager.Instance.getCurrentScene();
-
         //Air
         if(
             pData.air == AIR_FILTER_01_IN || pData.air == AIR_FILTER_04_IN ||
             pData.air == AIR_FILTER_02_IN || pData.air == AIR_FILTER_05_IN ||
-            pData.air == AIR_FILTER_03_IN || pData.air == AIR_FILTER_06_IN
+            pData.air == AIR_FILTER_03_IN || pData.air == AIR_FILTER_06_IN ||
+            pData.air == AIR_FILTER_07_IN || pData.air == AIR_FILTER_08_IN
         )
         {
-            elementAir1Reaction(pData.air);
+            if(!isElementAir1Done) {
+                elementAir1Reaction(pData.air);
+            }
+            else if(isElementAir1Done)
+            {
+                elementAir2Reaction(pData.air);
+            }
+
+            if(!isElementAir1Done && isAirFilter01_in && isAirFilter02_in && isAirFilter03_in && isAirFilter04_in && isAirFilter05_in)
+            {
+                if(!SceneManager.Instance.getCurrentScene().getName().equals("Air-2")) {
+
+                    EventManager.Instance.executeEvent("air-1_girl_thanking");
+
+                    isElementAir1Done = true;
+                    SceneManager.Instance.scheduleChangeScene("Air-2", 100);
+                }
+            }
         }
 
         //eau

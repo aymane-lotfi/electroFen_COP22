@@ -45,11 +45,12 @@ public class Config
             EVENTS_PATH+"/air-1/cloud_decrease_50.xml",
             EVENTS_PATH+"/air-1/cloud_decrease_100.xml",
             EVENTS_PATH+"/air-1/flowers_blossom.xml",
+            EVENTS_PATH+"/air-1/girl_thanking.xml",
 
-            //Air
-            EVENTS_PATH+"/terre/add_tree_0.xml",
-            EVENTS_PATH+"/terre/add_tree_1.xml",
-            EVENTS_PATH+"/terre/add_tree_2.xml"
+            //Air-2
+            EVENTS_PATH+"/air-2/add_tree_0.xml",
+            EVENTS_PATH+"/air-2/add_tree_1.xml",
+            EVENTS_PATH+"/air-2/add_tree_2.xml"
     );
 
 }

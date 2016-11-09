@@ -1,0 +1,6 @@
+<event Name="cloud_disappear" Scene="Air-1">
+    <Actions>
+        <actions class="com.mygdx.events.ActionHide" Action="hide_cloud_1" Actor="cloud_1" />
+        <actions class="com.mygdx.events.ActionHide" Action="hide_cloud_2" Actor="cloud_2" />
+    </Actions>
+</event>

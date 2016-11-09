@@ -1,0 +1,5 @@
+<event Name="air-1_girl_thanking" Scene="Air-1">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="air-1_girl_thanking" Actor="girl" Animation="thanking" />
+    </Actions>
+</event>
