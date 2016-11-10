@@ -442,10 +442,14 @@ public class GameManager implements InputListener
     {
         //Air
         if(
-            pData.air == AIR_FILTER_01_IN || pData.air == AIR_FILTER_04_IN ||
-            pData.air == AIR_FILTER_02_IN || pData.air == AIR_FILTER_05_IN ||
-            pData.air == AIR_FILTER_03_IN || pData.air == AIR_FILTER_06_IN ||
-            pData.air == AIR_FILTER_07_IN || pData.air == AIR_FILTER_08_IN
+            (pData.air == AIR_FILTER_01_IN && !isAirFilter01_in)
+            || (pData.air == AIR_FILTER_04_IN && !isAirFilter04_in)
+            || (pData.air == AIR_FILTER_02_IN && !isAirFilter02_in)
+            || (pData.air == AIR_FILTER_05_IN && !isAirFilter05_in)
+            || (pData.air == AIR_FILTER_03_IN && !isAirFilter03_in)
+            || (pData.air == AIR_FILTER_06_IN && !isAirFilter06_in)
+            || (pData.air == AIR_FILTER_07_IN && !isAirFilter07_in)
+            || (pData.air == AIR_FILTER_08_IN && !isAirFilter08_in)
         )
         {
             if(!isElementAir1Done) {
@@ -470,11 +474,16 @@ public class GameManager implements InputListener
 
         //eau
         if(
-                pData.water == WATER_FILTER_01_IN || pData.water == WATER_FILTER_02_IN ||
-                pData.water == WATER_FILTER_03_IN || pData.water == WATER_FILTER_04_IN ||
-                pData.water == WATER_FILTER_05_IN || pData.water == WATER_FILTER_06_IN ||
-                pData.water == WATER_FILTER_07_IN || pData.water == WATER_FILTER_08_IN ||
-                pData.water == WATER_FILTER_09_IN || pData.water == WATER_FILTER_10_IN
+                (pData.water == WATER_FILTER_01_IN && !isWaterFilter01_in)
+                || (pData.water == WATER_FILTER_02_IN && !isWaterFilter02_in)
+                || (pData.water == WATER_FILTER_03_IN && !isWaterFilter03_in)
+                || (pData.water == WATER_FILTER_04_IN && !isWaterFilter04_in)
+                || (pData.water == WATER_FILTER_05_IN && !isWaterFilter05_in)
+                || (pData.water == WATER_FILTER_06_IN && !isWaterFilter06_in)
+                || (pData.water == WATER_FILTER_07_IN && !isWaterFilter07_in)
+                || (pData.water == WATER_FILTER_08_IN && !isWaterFilter08_in)
+                || (pData.water == WATER_FILTER_09_IN && !isWaterFilter09_in)
+                || (pData.water == WATER_FILTER_10_IN && !isWaterFilter10_in)
             )
         {
 
