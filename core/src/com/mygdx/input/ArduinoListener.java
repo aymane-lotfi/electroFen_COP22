@@ -52,9 +52,7 @@ public class ArduinoListener implements SerialPortDataListener
                 final InputData _data = new InputData();
                 _data.water = obj.getInt("water");
                 _data.air = obj.getInt("air");
-                _data.earth1 = obj.getInt("earth");
-                _data.earth2 = obj.getInt("earth2");
-                _data.earth3 = obj.getInt("earth3");
+                _data.earth = obj.getInt("earth");
 
                 new Thread(new Runnable(){
                     @Override

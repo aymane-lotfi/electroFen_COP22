@@ -6,9 +6,7 @@ package com.mygdx.input;
 public class InputData
 {
     public int water = 0;
-    public int earth1 = 0;
-    public int earth2 = 0;
-    public int earth3 = 0;
+    public int earth = 0;
     public int solar = 0;
     public int air = 0;
 

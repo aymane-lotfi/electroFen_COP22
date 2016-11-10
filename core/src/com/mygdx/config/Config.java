@@ -13,13 +13,13 @@ public class Config
     public static String SCENES_PATH = "scenes";
     public static String EVENTS_PATH = "data/events";
 
-    public static String DEFAULT_SCENE = "Eau";//;//"Terre";//"Eau"; //The Scene's name
+    public static String DEFAULT_SCENE = "Terre-1";//;//"Terre";//"Eau"; //The Scene's name
 
     public static List<String> SCENES_LIST = Arrays.asList(
             SCENES_PATH+"/Eau.xml",
             SCENES_PATH+"/Air-1.xml",
-            SCENES_PATH+"/Air-2.xml"
-
+            SCENES_PATH+"/Air-2.xml",
+            SCENES_PATH+"/Terre-1.xml"
     );
 
     public static List<String> EVENTS_LIST = Arrays.asList(
@@ -50,7 +50,14 @@ public class Config
             //Air-2
             EVENTS_PATH+"/air-2/add_tree_0.xml",
             EVENTS_PATH+"/air-2/add_tree_1.xml",
-            EVENTS_PATH+"/air-2/add_tree_2.xml"
+            EVENTS_PATH+"/air-2/add_tree_2.xml",
+
+            //Terre-1
+            EVENTS_PATH+"/terre-1/window_tree1.xml",
+            EVENTS_PATH+"/terre-1/window_tree2.xml",
+            EVENTS_PATH+"/terre-1/window_tree3.xml",
+            EVENTS_PATH+"/terre-1/flower_blossoms.xml",
+            EVENTS_PATH+"/terre-1/tasse_tizane.xml"
     );
 
 }

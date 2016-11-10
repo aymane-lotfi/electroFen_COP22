@@ -1,0 +1,5 @@
+<event Name="terre1_window_tree3" Scene="Terre-1">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="window_tree3" Actor="window" Animation="window_tree3_anim" />
+    </Actions>
+</event>

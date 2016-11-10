@@ -1,0 +1,5 @@
+<event Name="tasse_tizane" Scene="Terre-1">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAnimate" Action="tasse_tizane" Actor="tasse" Animation="tasse_anim" />
+    </Actions>
+</event>

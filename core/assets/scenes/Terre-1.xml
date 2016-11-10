@@ -1,0 +1,117 @@
+<scene name="Terre-1">
+   <Actors class="java.util.ArrayList">
+      <actor Name="bg" Layer="0">
+         <Position x="0.0" y="-1.375351"/>
+         <Scale x="800.0" y="480.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/fondl.png"/>
+         </Components>
+      </actor>
+      <actor Name="cuisiniere" Layer="1">
+         <Position x="124.0" y="39.885376"/>
+         <Scale x="400.0" y="140.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/cuisiniere.png"/>
+         </Components>
+      </actor>
+      <actor Name="placard" Layer="1">
+         <Position x="125.0" y="257.192"/>
+         <Scale x="300.0" y="100.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/placard.png"/>
+         </Components>
+      </actor>
+      <actor Name="etagere_1" Layer="1">
+         <Position x="446.99997" y="275.07162"/>
+         <Scale x="64.0" y="64.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/etagere_1.png"/>
+         </Components>
+      </actor>
+      <actor Name="etagere_2" Layer="1">
+         <Position x="188.99998" y="195.30087"/>
+         <Scale x="54.0" y="54.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/etagere_2.png"/>
+         </Components>
+      </actor>
+      <actor Name="telaja" Layer="1">
+         <Position x="1.0" y="39.19771"/>
+         <Scale x="120.0" y="260.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/telaja.png"/>
+         </Components>
+      </actor>
+      <actor Name="tenjra" Layer="1">
+         <Position x="128.0" y="179.48425"/>
+         <Scale x="300.0" y="44.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/tenjra.png"/>
+         </Components>
+      </actor>
+      <actor Name="pot2" Layer="1">
+         <Position x="434.0" y="337.65045"/>
+         <Scale x="64.0" y="64.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/pot2.png"/>
+         </Components>
+      </actor>
+      <actor Name="tasse" Layer="1">
+         <Position x="298.0" y="179.48425"/>
+         <Scale x="47.0" y="47.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="tasse_default" AnimationSheet="data/actors/terre-1/tasse/animations/tasse_default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="tasse_anim" AnimationSheet="data/actors/terre-1/tasse/animations/tasse_anim.png" FramesCount="5" Speed="0.4"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+      <actor Name="window" Layer="1">
+         <Position x="523.0" y="174.67049"/>
+         <Scale x="200.0" y="200.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="window_default" AnimationSheet="data/actors/terre-1/window/animations/window_default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="window_tree1_anim" AnimationSheet="data/actors/terre-1/window/animations/window_tree1_anim.png" FramesCount="4" Speed="0.4"/>
+                  <animation Name="window_tree2_anim" AnimationSheet="data/actors/terre-1/window/animations/window_tree2_anim.png" FramesCount="4" Speed="0.4"/>
+                  <animation Name="window_tree3_anim" AnimationSheet="data/actors/terre-1/window/animations/window_tree3_anim.png" FramesCount="4" Speed="0.4"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+      <actor Name="table" Layer="1">
+         <Position x="529.0" y="39.19771"/>
+         <Scale x="250.0" y="160.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-1/table.png"/>
+         </Components>
+      </actor>
+      <actor Name="pot1" Layer="1">
+         <Position x="542.0" y="222.80803"/>
+         <Scale x="44.0" y="44.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="flower_default" AnimationSheet="data/actors/terre-1/flower/animations/flower_default.png" FramesCount="1" Speed="0.004918612"/>
+                  <animation Name="flower_blossoms" AnimationSheet="data/actors/terre-1/flower/animations/flower_blossoms_anim.png" FramesCount="4" Speed="0.4"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+      <actor Name="girl" Layer="1">
+         <Position x="417.99997" y="6.8768005"/>
+         <Scale x="120.0" y="250.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="default" AnimationSheet="data/actors/girl/animations/girl_clean.png" FramesCount="4" Speed="0.4"/>
+                  <animation Name="thanking" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+   </Actors>
+</scene>

@@ -79,6 +79,34 @@ public class GameManager implements InputListener
         boolean isAirFilter06_in = false;
         boolean isAirFilter07_in = false;
         boolean isAirFilter08_in = false;
+
+        //Terre-1
+        boolean isElementTerre1Done = false;
+
+        final int EARTH_FILTER_01_IN = 1;
+        final int EARTH_FILTER_02_IN = 2;
+        final int EARTH_FILTER_03_IN = 3;
+        final int EARTH_FILTER_04_IN = 4;
+        final int EARTH_FILTER_05_IN = 5;
+
+        boolean isEarthFilter01_in = false;
+        boolean isEarthFilter02_in = false;
+        boolean isEarthFilter03_in = false;
+        boolean isEarthFilter04_in = false;
+        boolean isEarthFilter05_in = false;
+
+        //Terre-2
+        final int EARTH_FILTER_06_IN = 1;
+        final int EARTH_FILTER_07_IN = 2;
+        final int EARTH_FILTER_08_IN = 3;
+        final int EARTH_FILTER_09_IN = 4;
+        final int EARTH_FILTER_10_IN = 5;
+
+        boolean isEarthFilter06_in = false;
+        boolean isEarthFilter07_in = false;
+        boolean isEarthFilter08_in = false;
+        boolean isEarthFilter09_in = false;
+        boolean isEarthFilter10_in = false;
     //
 
     public void load()
@@ -106,6 +134,7 @@ public class GameManager implements InputListener
         }
     }
 
+    //Water
     private void elementWaterReaction(int pValue)
     {
         checkScene("Eau");
@@ -313,6 +342,7 @@ public class GameManager implements InputListener
         }
     }
 
+    //Air
     private void elementAir2Reaction(int pValue)
     {
         checkScene("Air-2");
@@ -437,6 +467,78 @@ public class GameManager implements InputListener
         }
     }
 
+    //Terre
+    private void elementTerre1Reaction(int pValue)
+    {
+        checkScene("Terre-1");
+
+        Scene _current = SceneManager.Instance.getCurrentScene();
+
+        if(_current == null)
+        {
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "[GameManager - elementTerre1Reaction()] Terre-1 scene not found, current scene is null");
+            return;
+        }
+
+        switch (pValue)
+        {
+            case EARTH_FILTER_01_IN:
+
+                if (_current.isChanged())
+                {
+                    _current.addEvent("terre1_window_tree1");
+                } else
+                {
+                    EventManager.Instance.executeEvent("terre1_window_tree1");
+                }
+                isEarthFilter01_in = true;
+                break;
+            case EARTH_FILTER_02_IN:
+                if (_current.isChanged()) {
+                    _current.addEvent("terre1_window_tree2");
+                } else {
+                    EventManager.Instance.executeEvent("terre1_window_tree2");
+                }
+                isEarthFilter02_in = true;
+                break;
+            case EARTH_FILTER_03_IN:
+                if (_current.isChanged()) {
+                    _current.addEvent("terre1_window_tree3");
+                } else {
+                    EventManager.Instance.executeEvent("terre1_window_tree3");
+                }
+                isEarthFilter03_in = true;
+                break;
+            case EARTH_FILTER_04_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("terre1_flower_blossoms");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("terre1_flower_blossoms");
+                }
+                isEarthFilter04_in = true;
+                break;
+            case EARTH_FILTER_05_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("tasse_tizane");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("tasse_tizane");
+                }
+                isEarthFilter05_in = true;
+                break;
+        }
+    }
+
+    private void elementTerre2Reaction(int pValue)
+    {
+
+    }
+
     @Override
     public void notify(InputData pData)
     {
@@ -488,6 +590,42 @@ public class GameManager implements InputListener
         {
 
             elementWaterReaction(pData.water);
+        }
+
+        //Terre
+        if(
+                (pData.earth == EARTH_FILTER_01_IN && !isEarthFilter01_in)
+                || (pData.earth == EARTH_FILTER_02_IN && !isEarthFilter02_in)
+                || (pData.earth == EARTH_FILTER_03_IN && !isEarthFilter03_in)
+                || (pData.earth == EARTH_FILTER_03_IN && !isEarthFilter04_in)
+                || (pData.earth == EARTH_FILTER_05_IN && !isEarthFilter05_in)
+                || (pData.earth == EARTH_FILTER_06_IN && !isEarthFilter06_in)
+                || (pData.earth == EARTH_FILTER_07_IN && !isEarthFilter07_in)
+                || (pData.earth == EARTH_FILTER_08_IN && !isEarthFilter08_in)
+                || (pData.earth == EARTH_FILTER_09_IN && !isEarthFilter09_in)
+                || (pData.earth == EARTH_FILTER_10_IN && !isEarthFilter10_in)
+            )
+        {
+            if(!isElementTerre1Done) {
+                elementTerre1Reaction(pData.earth);
+            }
+            else if(isElementTerre1Done)
+            {
+                elementTerre2Reaction(pData.earth);
+            }
+
+            if(!isElementTerre1Done && isEarthFilter01_in && isEarthFilter02_in && isEarthFilter03_in && isEarthFilter04_in && isEarthFilter05_in)
+            {
+                /*
+                if(!SceneManager.Instance.getCurrentScene().getName().equals("Terre-2")) {
+
+                    EventManager.Instance.executeEvent("Terre-1_girl_thanking");
+
+                    isElementTerre1Done = true;
+                    SceneManager.Instance.scheduleChangeScene("Terre-2", 100);
+                }
+                */
+            }
         }
 
     }
