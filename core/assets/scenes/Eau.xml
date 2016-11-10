@@ -4,7 +4,7 @@
          <Position x="0.0" y="0.0"/>
          <Scale x="800.0" y="480.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/bg.png"/>
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/eau/bg.png"/>
          </Components>
       </actor>
       <actor Name="lavabo" Layer="1">
@@ -23,14 +23,14 @@
          <Position x="380.0" y="220.70522"/>
          <Scale x="80.0" y="100.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/mirroir.PNG"/>
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/eau/mirroir.PNG"/>
          </Components>
       </actor>
       <actor Name="cuvette" Layer="1">
          <Position x="5.333313" y="0.0"/>
          <Scale x="260.0" y="160.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/cuvette.png"/>
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/eau/cuvette.png"/>
          </Components>
       </actor>
       <actor Name="bano" Layer="1">
@@ -78,7 +78,7 @@
          <Position x="5.333313" y="285.0"/>
          <Scale x="120.0" y="120.0"/>
          <Components class="java.util.ArrayList">
-            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/eau/photo.png"/>
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/eau/photo.png"/>
          </Components>
       </actor>
       <actor Name="flower" Layer="1">

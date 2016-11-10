@@ -1,0 +1,11 @@
+ <actor Name="lavabo" Layer="1">
+         <Position x="373.3333" y="51.0"/>
+         <Scale x="100.0" y="160.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+		<Animations class="java.util.ArrayList">
+			<animation Name="lavabo_coule" AnimationSheet="data/actors/eau/lavabo/animations/lavabo_anim.png" FramesCount="7" Speed="0.45"/>
+		</Animations>
+	    </component>
+         </Components>
+ </actor>
