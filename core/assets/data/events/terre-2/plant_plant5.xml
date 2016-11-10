@@ -1,0 +1,8 @@
+<event Name="plant_plant5" Scene="Terre-2">
+    <Actions>
+        <actions class="com.mygdx.events.ActionAdd" Action="plant_plan5" Actor="" Animation=""
+                 ActorPath="data/actors/terre-2/plant5.xml"
+                 MarkerNumber="5"/>
+        <actions class="com.mygdx.events.ActionAnimate" Action="thanks" Actor="girl" Animation="thanking5" />
+    </Actions>
+</event>

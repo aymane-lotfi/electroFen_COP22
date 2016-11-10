@@ -96,11 +96,11 @@ public class GameManager implements InputListener
         boolean isEarthFilter05_in = false;
 
         //Terre-2
-        final int EARTH_FILTER_06_IN = 1;
-        final int EARTH_FILTER_07_IN = 2;
-        final int EARTH_FILTER_08_IN = 3;
-        final int EARTH_FILTER_09_IN = 4;
-        final int EARTH_FILTER_10_IN = 5;
+        final int EARTH_FILTER_06_IN = 6;
+        final int EARTH_FILTER_07_IN = 7;
+        final int EARTH_FILTER_08_IN = 8;
+        final int EARTH_FILTER_09_IN = 9;
+        final int EARTH_FILTER_10_IN = 10;
 
         boolean isEarthFilter06_in = false;
         boolean isEarthFilter07_in = false;
@@ -536,7 +536,68 @@ public class GameManager implements InputListener
 
     private void elementTerre2Reaction(int pValue)
     {
+        checkScene("Terre-2");
 
+        Scene _current = SceneManager.Instance.getCurrentScene();
+
+        if(_current == null)
+        {
+            Gdx.app.error(ElectroFunCop22.APP_TAG, "[GameManager - elementTerre2Reaction()] Terre-2 scene not found, current scene is null");
+            return;
+        }
+
+        switch (pValue)
+        {
+            case EARTH_FILTER_06_IN:
+
+                if (_current.isChanged())
+                {
+                    _current.addEvent("plant_plant1");
+                } else
+                {
+                    EventManager.Instance.executeEvent("plant_plant1");
+                }
+                isEarthFilter06_in = true;
+                break;
+            case EARTH_FILTER_07_IN:
+                if (_current.isChanged()) {
+                    _current.addEvent("plant_plant2");
+                } else {
+                    EventManager.Instance.executeEvent("plant_plant2");
+                }
+                isEarthFilter07_in = true;
+                break;
+            case EARTH_FILTER_08_IN:
+                if (_current.isChanged()) {
+                    _current.addEvent("plant_plant3");
+                } else {
+                    EventManager.Instance.executeEvent("plant_plant3");
+                }
+                isEarthFilter08_in = true;
+                break;
+            case EARTH_FILTER_09_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("plant_plant4");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("plant_plant4");
+                }
+                isEarthFilter09_in = true;
+                break;
+            case EARTH_FILTER_10_IN:
+                if(_current.isChanged())
+                {
+                    _current.addEvent("plant_plant5");
+                }
+                else
+                {
+                    EventManager.Instance.executeEvent("plant_plant5");
+                }
+                isEarthFilter10_in = true;
+                break;
+        }
     }
 
     @Override
@@ -597,7 +658,7 @@ public class GameManager implements InputListener
                 (pData.earth == EARTH_FILTER_01_IN && !isEarthFilter01_in)
                 || (pData.earth == EARTH_FILTER_02_IN && !isEarthFilter02_in)
                 || (pData.earth == EARTH_FILTER_03_IN && !isEarthFilter03_in)
-                || (pData.earth == EARTH_FILTER_03_IN && !isEarthFilter04_in)
+                || (pData.earth == EARTH_FILTER_04_IN && !isEarthFilter04_in)
                 || (pData.earth == EARTH_FILTER_05_IN && !isEarthFilter05_in)
                 || (pData.earth == EARTH_FILTER_06_IN && !isEarthFilter06_in)
                 || (pData.earth == EARTH_FILTER_07_IN && !isEarthFilter07_in)
@@ -616,7 +677,6 @@ public class GameManager implements InputListener
 
             if(!isElementTerre1Done && isEarthFilter01_in && isEarthFilter02_in && isEarthFilter03_in && isEarthFilter04_in && isEarthFilter05_in)
             {
-                /*
                 if(!SceneManager.Instance.getCurrentScene().getName().equals("Terre-2")) {
 
                     EventManager.Instance.executeEvent("Terre-1_girl_thanking");
@@ -624,7 +684,6 @@ public class GameManager implements InputListener
                     isElementTerre1Done = true;
                     SceneManager.Instance.scheduleChangeScene("Terre-2", 100);
                 }
-                */
             }
         }
 

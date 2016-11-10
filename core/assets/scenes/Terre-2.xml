@@ -1,0 +1,64 @@
+<scene name="Terre-2">
+   <Actors class="java.util.ArrayList">
+      <actor Name="bg" Layer="0">
+         <Position x="0.0" y="-1.375351"/>
+         <Scale x="800.0" y="480.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.SpriteComponent" Name="SpriteComponent" isDrawable="true" SpritePath="data/actors/terre-2/bg.png"/>
+         </Components>
+      </actor>
+       <actor Name="marker1" Layer="1">
+           <Position x="16.0" y="-1.375351"/>
+           <Scale x="180.0" y="180.0"/>
+           <Components class="java.util.ArrayList">
+               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="1" isDrawable="false" />
+           </Components>
+       </actor>
+
+      <actor Name="marker2" Layer="1">
+          <Position x="215.00002" y="-3.4384003"/>
+          <Scale x="220.0" y="190.0"/>
+          <Components class="java.util.ArrayList">
+              <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="2" isDrawable="false" />
+          </Components>
+      </actor>
+      <actor Name="marker3" Layer="1">
+          <Position x="410.0" y="-1.4117737"/>
+          <Scale x="180.0" y="180.0"/>
+          <Components class="java.util.ArrayList">
+              <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="3" isDrawable="false" />
+          </Components>
+      </actor>
+       <actor Name="marker4" Layer="1">
+           <Position x="521.0" y="2.1176453"/>
+           <Scale x="180.0" y="180.0"/>
+           <Components class="java.util.ArrayList">
+               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="4" isDrawable="false" />
+           </Components>
+       </actor>
+       <actor Name="marker5" Layer="1">
+           <Position x="633.0" y="-1.4117737"/>
+           <Scale x="180.0" y="180.0"/>
+           <Components class="java.util.ArrayList">
+               <component class="com.mygdx.components.MarkerComponent" Name="MarkerComponent" Number ="5" isDrawable="false" />
+           </Components>
+       </actor>
+
+      <actor Name="girl" Layer="1">
+         <Position x="362.0" y="172.23529"/>
+         <Scale x="120.0" y="250.0"/>
+         <Components class="java.util.ArrayList">
+            <component class="com.mygdx.components.AnimationComponent" Name="AnimationComponent" isDrawable="true">
+               <Animations class="java.util.ArrayList">
+                  <animation Name="default" AnimationSheet="data/actors/girl/animations/standing_pose.png" FramesCount="1" Speed="0"/>
+                  <animation Name="thanking1" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                   <animation Name="thanking2" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                   <animation Name="thanking3" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                   <animation Name="thanking4" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+                   <animation Name="thanking5" AnimationSheet="data/actors/girl/animations/thanking.png" FramesCount="4" Speed="0.35"/>
+               </Animations>
+            </component>
+         </Components>
+      </actor>
+   </Actors>
+</scene>

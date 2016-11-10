@@ -16,14 +16,15 @@ public class Config
     public static String DEFAULT_SCENE = "Terre-1";//;//"Terre";//"Eau"; //The Scene's name
 
     public static List<String> SCENES_LIST = Arrays.asList(
-            SCENES_PATH+"/Eau.xml",
-            SCENES_PATH+"/Air-1.xml",
-            SCENES_PATH+"/Air-2.xml",
-            SCENES_PATH+"/Terre-1.xml"
+            SCENES_PATH+"/Eau.xml", //Salle de bain
+            SCENES_PATH+"/Air-1.xml", //salon
+            SCENES_PATH+"/Air-2.xml", //jardin
+            SCENES_PATH+"/Terre-1.xml", //cuisine
+            SCENES_PATH+"/Terre-2.xml" //potagé
     );
 
     public static List<String> EVENTS_LIST = Arrays.asList(
-            //Eau
+            //Eau : Salle de bain
             EVENTS_PATH+"/eau/bano_coule.xml",
             EVENTS_PATH+"/eau/lavabo_coule.xml",
             EVENTS_PATH+"/eau/placard_propre_0.xml",
@@ -39,7 +40,7 @@ public class Config
             EVENTS_PATH+"/eau/window_tree2_appears.xml",
             EVENTS_PATH+"/eau/flower_blossoms.xml",
 
-            //Air-1
+            //Air-1 : Salon
             EVENTS_PATH+"/air-1/window_tree1_appears.xml",
             EVENTS_PATH+"/air-1/window_tree2_appears.xml",
             EVENTS_PATH+"/air-1/cloud_decrease_50.xml",
@@ -47,17 +48,24 @@ public class Config
             EVENTS_PATH+"/air-1/flowers_blossom.xml",
             EVENTS_PATH+"/air-1/girl_thanking.xml",
 
-            //Air-2
+            //Air-2 : Jardin
             EVENTS_PATH+"/air-2/add_tree_0.xml",
             EVENTS_PATH+"/air-2/add_tree_1.xml",
             EVENTS_PATH+"/air-2/add_tree_2.xml",
 
-            //Terre-1
+            //Terre-1 : Cuisine
             EVENTS_PATH+"/terre-1/window_tree1.xml",
             EVENTS_PATH+"/terre-1/window_tree2.xml",
             EVENTS_PATH+"/terre-1/window_tree3.xml",
             EVENTS_PATH+"/terre-1/flower_blossoms.xml",
-            EVENTS_PATH+"/terre-1/tasse_tizane.xml"
+            EVENTS_PATH+"/terre-1/tasse_tizane.xml",
+
+            //Terre-2 : Potagé
+            EVENTS_PATH+"/terre-2/plant_plant1.xml",
+            EVENTS_PATH+"/terre-2/plant_plant2.xml",
+            EVENTS_PATH+"/terre-2/plant_plant3.xml",
+            EVENTS_PATH+"/terre-2/plant_plant4.xml",
+            EVENTS_PATH+"/terre-2/plant_plant5.xml"
     );
 
 }
